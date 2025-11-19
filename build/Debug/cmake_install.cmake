@@ -42,6 +42,21 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/build/Debug/cmake/stm32cubemx/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/build/Debug/App/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/build/Debug/Drivers_custom/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/build/Debug/Hardware/cmake_install.cmake")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

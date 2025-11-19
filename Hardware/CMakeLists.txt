@@ -1,0 +1,2 @@
+file(GLOB HARDWARE_SOURCES "*.c")
+target_sources(${PROJECT_NAME} PRIVATE ${HARDWARE_SOURCES})

@@ -305,6 +305,93 @@ build cmake/stm32cubemx/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build cmake/stm32cubemx/rebuild_cache: phony cmake/stm32cubemx/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build App/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug\App && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led -BC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build App/edit_cache: phony App/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build App/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug\App && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led -BC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build App/rebuild_cache: phony App/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build Drivers_custom/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug\Drivers_custom && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led -BC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build Drivers_custom/edit_cache: phony Drivers_custom/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Drivers_custom/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug\Drivers_custom && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led -BC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Drivers_custom/rebuild_cache: phony Drivers_custom/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build Hardware/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug\Hardware && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led -BC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build Hardware/edit_cache: phony Hardware/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Hardware/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug\Hardware && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led -BC:\Users\svenw\Documents\cubeIDE_specialization\stm32_blinking_led\build\Debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Hardware/rebuild_cache: phony Hardware/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build STM32_Drivers: phony cmake/stm32cubemx/STM32_Drivers
@@ -319,7 +406,28 @@ build stm32_blinking_led: phony stm32_blinking_led.elf
 #############################################
 # Folder: C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/build/Debug
 
-build all: phony stm32_blinking_led.elf cmake/stm32cubemx/all
+build all: phony stm32_blinking_led.elf cmake/stm32cubemx/all App/all Drivers_custom/all Hardware/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/build/Debug/App
+
+build App/all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/build/Debug/Drivers_custom
+
+build Drivers_custom/all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/build/Debug/Hardware
+
+build Hardware/all: phony
 
 # =============================================================================
 
@@ -335,14 +443,14 @@ build cmake/stm32cubemx/all: phony cmake/stm32cubemx/STM32_Drivers
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/gcc-arm-none-eabi.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.0-rc3/CMakeASMCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/App/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/gcc-arm-none-eabi.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.0-rc3/CMakeASMCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/gcc-arm-none-eabi.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.0-rc3/CMakeASMCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeSystem.cmake: phony
+build C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/App/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/gcc-arm-none-eabi.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.0-rc3/CMakeASMCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeSystem.cmake: phony
 
 
 #############################################
