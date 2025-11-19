@@ -4,7 +4,7 @@
         {
             "name": "Cortex Debug",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/config_default/stm32_blinking_led.elf",
+            "executable": "${workspaceFolder}/build/Debug/stm32_blinking_led.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "stlink",

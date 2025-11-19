@@ -2,6 +2,8 @@
     "files.associations": {
         "*.ino": "cpp",
         "main.h": "c",
-        "stm32f7xx_hal.h": "c"
+        "stm32f7xx_hal.h": "c",
+        "featblinky.h": "c",
+        "app.h": "c"
     }
 }
