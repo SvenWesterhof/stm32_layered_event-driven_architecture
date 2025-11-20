@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define externalLed_Pin GPIO_PIN_15
 #define externalLed_GPIO_Port GPIOF
+#define temperature_sensor_on_off_Pin GPIO_PIN_14
+#define temperature_sensor_on_off_GPIO_Port GPIOG
 
 /* USER CODE BEGIN Private defines */
 
