@@ -1,6 +1,8 @@
 #ifndef PINOUT_H
 #define PINOUT_H
 
+#include "stm32f7xx_hal.h"
+
 #define EXT_LED_PIN         GPIO_PIN_5
 #define EXT_LED_GPIO_PORT   GPIOA
 

@@ -1,4 +1,0 @@
-#ifndef TEMPERATUREDISPLAY_H
-#define TEMPERATUREDISPLAY_H
-
-#include 
