@@ -2591,21 +2591,23 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
+ .data.default_temp_sensor
+                0x00000000       0x10 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .text.temperature_sensor_init
                 0x00000000        0xe CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .text.temperature_sensor_open
                 0x00000000        0xe CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .text.temperature_sensor_read
-                0x00000000       0x18 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
+                0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .text.temperature_sensor_close
                 0x00000000        0xe CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_info    0x00000000       0xc5 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_abbrev  0x00000000       0x5e CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
+ .debug_info    0x00000000      0x7a5 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
+ .debug_abbrev  0x00000000      0x176 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .debug_aranges
                 0x00000000       0x38 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .debug_rnglists
                 0x00000000       0x25 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x1d4 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
+ .debug_macro   0x00000000      0x1ce CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .debug_macro   0x00000000      0xaf0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .debug_macro   0x00000000      0x287 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
@@ -2647,11 +2649,11 @@ Discarded input sections
  .debug_macro   0x00000000      0x108 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .debug_macro   0x00000000       0x35 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .debug_macro   0x00000000      0x15b CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x64 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .debug_line    0x00000000      0x6e0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_str     0x00000000    0xe68e9 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
+ .debug_str     0x00000000    0xe6ed7 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .comment       0x00000000       0x47 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_frame   0x00000000       0x90 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
+ .debug_frame   0x00000000       0x98 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .ARM.attributes
                 0x00000000       0x32 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .data          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_aeabi_uldivmod.o)

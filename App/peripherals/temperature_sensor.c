@@ -12,7 +12,7 @@ void temperature_sensor_open() {
     // Open connection to the temperature sensor
 }
 
-float temperature_sensor_read() {
+float temperature_sensor_read(I2C_HandleTypeDef *hi2c, temp_sensor_t *sensor, float *temperature) {
     // Read temperature value from the sensor
     return 0.0f; // Placeholder return value
 }
