@@ -2444,6 +2444,121 @@ Discarded input sections
  .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
  .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
  .debug_macro   0x00000000      0xaf0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .text          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .data.default_ath25_sensor
+                0x00000000       0x14 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .text.ath25_init
+                0x00000000        0xe CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .text.ath25_crc8
+                0x00000000       0x72 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .text.ath25_open
+                0x00000000       0x92 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .rodata        0x00000000        0x3 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .text.ath25_read
+                0x00000000      0x12c CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .text.ath25_close
+                0x00000000       0x3a CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_info    0x00000000      0x9a3 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_abbrev  0x00000000      0x1fd CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_aranges
+                0x00000000       0x40 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_rnglists
+                0x00000000       0x2d CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x1dd CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0xaf0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x287 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x2e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x3b CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x8e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x51 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0xd9 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000     0x12cd CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x11f CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x19 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000    0x1aa23 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x6d CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000     0x375e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x190 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x63 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000     0x1add CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x6c4 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x18b CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x115 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x26e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x24f CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x71 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x58 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x236 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x14e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x3db CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x12 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x22c CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x61 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x12e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x108 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x35 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000      0x15b CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_line    0x00000000      0x817 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_str     0x00000000    0xe6fa8 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .comment       0x00000000       0x47 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .debug_frame   0x00000000       0xcc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
+ .ARM.attributes
+                0x00000000       0x32 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
  .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
  .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
  .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
@@ -2546,116 +2661,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x30 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
  .ARM.attributes
                 0x00000000       0x32 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .text          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .data.default_temp_sensor
-                0x00000000       0x10 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .text.temperature_sensor_init
-                0x00000000        0xe CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .text.temperature_sensor_open
-                0x00000000        0xe CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .text.temperature_sensor_read
-                0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .text.temperature_sensor_close
-                0x00000000        0xe CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_info    0x00000000      0x7a5 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_abbrev  0x00000000      0x176 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_aranges
-                0x00000000       0x38 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_rnglists
-                0x00000000       0x25 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x1ce CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0xaf0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x287 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x2e CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x3b CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x8e CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x51 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x103 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x6a CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x1df CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x1c CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0xd9 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000     0x12cd CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x11f CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x19 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000    0x1aa23 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x6d CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000     0x375e CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x190 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x63 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000     0x1add CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x6c4 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x18b CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x115 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x26e CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0xa5 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x24f CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x71 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x58 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x236 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x14e CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x3db CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x12 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x22c CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x61 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0xa5 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x12e CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x108 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x35 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000      0x15b CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_macro   0x00000000       0x6a CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_line    0x00000000      0x6e0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_str     0x00000000    0xe6ed7 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .comment       0x00000000       0x47 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .debug_frame   0x00000000       0x98 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
- .ARM.attributes
-                0x00000000       0x32 CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
  .data          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_aeabi_uldivmod.o)
  .bss           0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_aeabi_uldivmod.o)
  .text          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_udivmoddi4.o)
@@ -2924,8 +2929,8 @@ LOAD CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
 LOAD CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
 LOAD CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
 LOAD CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+LOAD CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj
 LOAD CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
-LOAD CMakeFiles/stm32_blinking_led.dir/app/peripherals/temperature_sensor.c.obj
 LOAD C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a
 START GROUP
 LOAD C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a
