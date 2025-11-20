@@ -1,10 +1,10 @@
 # ninja log v7
-41	111	7852839572599430	CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj	40d708e9e4fa8eb8
-32	134	7852839572499441	CMakeFiles/stm32_blinking_led.dir/Core/Src/sysmem.c.obj	8af991826b5dbb7e
-36	166	7852839572549440	CMakeFiles/stm32_blinking_led.dir/Core/Src/syscalls.c.obj	b029795949ebaf8
-27	319	7852839572449451	CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj	8103aa136378d8ad
-23	320	7852839572409442	CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj	7e38c4c723541fdb
-22	225	7852840756501797	CMakeFiles/stm32_blinking_led.dir/Core/Src/main.c.obj	22e35f2ed97d39a3
+51	152	7853354348604815	CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj	230d804ab8d69a10
+38	180	7853354348471487	CMakeFiles/stm32_blinking_led.dir/Core/Src/sysmem.c.obj	d89face5a44d9394
+44	222	7853354348531786	CMakeFiles/stm32_blinking_led.dir/Core/Src/syscalls.c.obj	18497a72fcd0c729
+33	344	7853354348416367	CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj	aa96da318fdbf131
+28	355	7853354348371205	CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj	2020dea737befb1e
+22	345	7853354348311117	CMakeFiles/stm32_blinking_led.dir/Core/Src/main.c.obj	dc219a820d7d01a1
 33	579	7852659575651554	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c.obj	8b90b71b9dd7ff1f
 69	602	7852659576016703	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c.obj	1fdb0f0127b97f2a
 54	611	7852659575866721	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c.obj	ae8f11d1ceafaac8
@@ -20,8 +20,10 @@
 501	892	7852659580331222	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c.obj	8d52bafdf6716f56
 579	925	7852659581112526	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c.obj	8a4c1f0f8a260cf4
 484	1065	7852659580176099	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c.obj	b3806d851586344e
-237	376	7852842268565921	stm32_blinking_led.elf	419bc738a8b4bde9
-2	227	7853278732052193	build.ninja	151b2b83ca02b506
-52	154	7852839572699448	CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj	4dad7d3c586994e8
+395	559	7853354352038307	stm32_blinking_led.elf	4b1c62ec22b2a9f1
+2	227	7853354384762372	build.ninja	151b2b83ca02b506
+74	201	7853354348830684	CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj	64f91cb5fc0bf279
 3	236	7852842266223253	CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj	897474006edacc83
-24	87	7852841823431943	CMakeFiles/stm32_blinking_led.dir/app/app.c.obj	98e7d221d5e7f6a3
+58	172	7853354348669849	CMakeFiles/stm32_blinking_led.dir/app/app.c.obj	1159a9719368cd2c
+66	383	7853354348749985	CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj	93ef69e86bfd151f
+81	395	7853354348906192	CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj	568d5551ab9aad2c

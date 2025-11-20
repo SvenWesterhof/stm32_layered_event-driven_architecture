@@ -3,18 +3,18 @@
 #include "features/feature.h"
 #include "peripherals/peripheral.h"
 
-void App_Init(void)
+void app_init(void)
 {
     //Peripheral_Init();
     //Control_Init();
-    Feature_Init();
+    feature_init();
     
 }
 
-void App_Run(void)
+void app_run(void)
 {
     //Peripheral_Run();
     //Control_Run();
-    Feature_Run();
+    feature_run();
 
 }

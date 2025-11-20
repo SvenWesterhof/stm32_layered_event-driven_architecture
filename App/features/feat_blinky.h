@@ -1,7 +1,7 @@
 #ifndef FEATBLINKY_H
 #define FEATBLINKY_H
 
-void Blinky_Init(void);
-void Blinky_Run(void);
+void blinky_init(void);
+void blinky_run(void);
 
 #endif

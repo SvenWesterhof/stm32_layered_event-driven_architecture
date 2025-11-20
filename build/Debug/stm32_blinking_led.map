@@ -2392,103 +2392,205 @@ Discarded input sections
  .text          0x00000000       0x14 CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
  .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
  .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .text          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0xaf0 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x287 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x2e CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x3b CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x8e CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x51 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x103 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x6a CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x1df CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x1c CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0xd9 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000     0x12cd CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x11f CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x19 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000    0x1aa23 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x6d CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000     0x375e CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x190 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x63 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000     0x1add CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x6c4 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x18b CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x115 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x26e CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0xa5 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x24f CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x71 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x58 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x236 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x14e CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x3db CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x12 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x22c CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x61 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0xa5 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x12e CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x108 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x35 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000      0x15b CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x00000000       0x10 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
- .text          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
- .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
- .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
- .debug_macro   0x00000000      0xaf0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
  .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
  .text          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
  .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
  .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
  .debug_macro   0x00000000      0xaf0 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .text          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0xaf0 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x287 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x2e CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x3b CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x8e CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x51 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0xd9 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000     0x12cd CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x11f CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x19 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000    0x1aa23 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x6d CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000     0x375e CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x190 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x63 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000     0x1add CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x6c4 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x18b CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x115 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x26e CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x24f CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x71 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x58 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x236 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x14e CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x3db CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x12 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x22c CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x61 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x12e CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x108 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x35 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000      0x15b CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+ .text          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+ .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+ .debug_macro   0x00000000      0xaf0 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .group         0x00000000        0xc CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .text          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .data          0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .text.ips_display_init
+                0x00000000        0xe CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_info    0x00000000       0x8a CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_abbrev  0x00000000       0x43 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_aranges
+                0x00000000       0x20 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_rnglists
+                0x00000000       0x13 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x1d4 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0xaf0 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x287 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x2e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x3b CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x8e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x51 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0xd9 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000     0x12cd CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x11f CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x19 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000    0x1aa23 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x6d CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000     0x375e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x190 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x63 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000     0x1add CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x6c4 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x18b CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x115 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x26e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x24f CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x71 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x58 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x236 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x14e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x3db CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x12 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x22c CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x61 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x12e CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x108 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x35 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000      0x15b CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_macro   0x00000000       0x40 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_line    0x00000000      0x68c CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_str     0x00000000    0xe67cf CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .comment       0x00000000       0x47 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .debug_frame   0x00000000       0x30 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
+ .ARM.attributes
+                0x00000000       0x32 CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
  .data          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_aeabi_uldivmod.o)
  .bss           0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_aeabi_uldivmod.o)
  .text          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_udivmoddi4.o)
@@ -2754,9 +2856,10 @@ LOAD CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj
 LOAD CMakeFiles/stm32_blinking_led.dir/Core/Src/sysmem.c.obj
 LOAD CMakeFiles/stm32_blinking_led.dir/Core/Src/syscalls.c.obj
 LOAD CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
-LOAD CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
-LOAD CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
 LOAD CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+LOAD CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+LOAD CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+LOAD CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj
 LOAD C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a
 START GROUP
 LOAD C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a
@@ -3018,24 +3121,24 @@ LOAD C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb
                 0x08001564                DMA2_Stream6_IRQHandler
                 0x08001564                SAI1_IRQHandler
                 0x08001564                DMA1_Stream3_IRQHandler
- *fill*         0x08001566        0x2 
- .text.Blinky_Init
-                0x08001568       0x18 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
-                0x08001568                Blinky_Init
- .text.Blinky_Run
-                0x08001580       0x40 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
-                0x08001580                Blinky_Run
- .text.Feature_Init
-                0x080015c0        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
-                0x080015c0                Feature_Init
- .text.Feature_Run
-                0x080015cc        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
-                0x080015cc                Feature_Run
- .text.App_Init
-                0x080015d8        0xc CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
-                0x080015d8                App_Init
- .text.App_Run  0x080015e4        0xc CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
-                0x080015e4                App_Run
+ .text.app_init
+                0x08001566        0xc CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+                0x08001566                app_init
+ .text.app_run  0x08001572        0xc CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+                0x08001572                app_run
+ *fill*         0x0800157e        0x2 
+ .text.blinky_init
+                0x08001580       0x18 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+                0x08001580                blinky_init
+ .text.blinky_run
+                0x08001598       0x40 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+                0x08001598                blinky_run
+ .text.feature_init
+                0x080015d8        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+                0x080015d8                feature_init
+ .text.feature_run
+                0x080015e4        0xc CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+                0x080015e4                feature_run
  .text.__udivmoddi4
                 0x080015f0      0x2f8 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_udivmoddi4.o)
                 0x080015f0                __udivmoddi4
@@ -3138,7 +3241,7 @@ LOAD C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb
                 0x20000008                uwTickFreq
  *fill*         0x20000009        0x3 
  .data.interval_ms
-                0x2000000c        0x4 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
+                0x2000000c        0x4 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
  *(.RamFunc)
  *(.RamFunc*)
                 0x20000010                        . = ALIGN (0x4)
@@ -3197,7 +3300,7 @@ LOAD C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb
  .bss.uwTick    0x2000002c        0x4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c.obj
                 0x2000002c                uwTick
  .bss.last_toggle
-                0x20000030        0x4 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
+                0x20000030        0x4 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
  *(COMMON)
                 0x20000034                        . = ALIGN (0x4)
                 0x20000034                        _ebss = .
@@ -3251,11 +3354,11 @@ LOAD linker stubs
  .ARM.attributes
                 0x000001e2       0x21 CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
  .ARM.attributes
-                0x00000203       0x32 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
+                0x00000203       0x32 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
  .ARM.attributes
-                0x00000235       0x32 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+                0x00000235       0x32 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
  .ARM.attributes
-                0x00000267       0x32 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+                0x00000267       0x32 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
  .ARM.attributes
                 0x00000299       0x20 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
@@ -3281,9 +3384,9 @@ LOAD linker stubs
  .comment       0x00000046       0x47 CMakeFiles/stm32_blinking_led.dir/Core/Src/main.c.obj
  .comment       0x00000046       0x47 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj
  .comment       0x00000046       0x47 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj
- .comment       0x00000046       0x47 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .comment       0x00000046       0x47 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
  .comment       0x00000046       0x47 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .comment       0x00000046       0x47 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
 
 .debug_info     0x00000000     0x3f20
  .debug_info    0x00000000      0x6ed cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj
@@ -3295,9 +3398,9 @@ LOAD linker stubs
  .debug_info    0x000038dc      0x112 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj
  .debug_info    0x000039ee      0x28d CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj
  .debug_info    0x00003c7b       0x30 CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
- .debug_info    0x00003cab      0x1c7 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_info    0x00003e72       0x57 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
- .debug_info    0x00003ec9       0x57 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_info    0x00003cab       0x57 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_info    0x00003d02      0x1c7 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_info    0x00003ec9       0x57 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
 
 .debug_abbrev   0x00000000     0x107f
  .debug_abbrev  0x00000000      0x13b cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj
@@ -3309,9 +3412,9 @@ LOAD linker stubs
  .debug_abbrev  0x00000d5a       0x73 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj
  .debug_abbrev  0x00000dcd       0xd8 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj
  .debug_abbrev  0x00000ea5       0x24 CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
- .debug_abbrev  0x00000ec9      0x12a CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_abbrev  0x00000ff3       0x46 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
- .debug_abbrev  0x00001039       0x46 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_abbrev  0x00000ec9       0x46 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_abbrev  0x00000f0f      0x12a CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_abbrev  0x00001039       0x46 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
 
 .debug_aranges  0x00000000      0x4a0
  .debug_aranges
@@ -3333,11 +3436,11 @@ LOAD linker stubs
  .debug_aranges
                 0x00000400       0x28 CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
  .debug_aranges
-                0x00000428       0x28 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
+                0x00000428       0x28 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
  .debug_aranges
-                0x00000450       0x28 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+                0x00000450       0x28 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
  .debug_aranges
-                0x00000478       0x28 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+                0x00000478       0x28 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
 
 .debug_rnglists
                 0x00000000      0x347
@@ -3360,11 +3463,11 @@ LOAD linker stubs
  .debug_rnglists
                 0x000002e3       0x19 CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
  .debug_rnglists
-                0x000002fc       0x19 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
+                0x000002fc       0x19 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
  .debug_rnglists
-                0x00000315       0x19 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
+                0x00000315       0x19 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
  .debug_rnglists
-                0x0000032e       0x19 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+                0x0000032e       0x19 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
 
 .debug_macro    0x00000000    0x2549c
  .debug_macro   0x00000000      0x1bb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj
@@ -3417,11 +3520,11 @@ LOAD linker stubs
  .debug_macro   0x00024ec8       0x10 CMakeFiles/stm32_blinking_led.dir/Core/Src/main.c.obj
  .debug_macro   0x00024ed8      0x1d4 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj
  .debug_macro   0x000250ac      0x1ca CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj
- .debug_macro   0x00025276      0x1d4 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_macro   0x0002544a       0x25 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
- .debug_macro   0x0002546f       0x2d CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_macro   0x00025276       0x2d CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_macro   0x000252a3      0x1d4 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_macro   0x00025477       0x25 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
 
-.debug_line     0x00000000     0x5315
+.debug_line     0x00000000     0x5318
  .debug_line    0x00000000      0x6a6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj
  .debug_line    0x000006a6      0xbd9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c.obj
  .debug_line    0x0000127f      0xe8e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c.obj
@@ -3431,24 +3534,24 @@ LOAD linker stubs
  .debug_line    0x00003c9e      0x6e1 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj
  .debug_line    0x0000437f      0x632 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj
  .debug_line    0x000049b1       0x7a CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
- .debug_line    0x00004a2b      0x669 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_line    0x00005094       0xc3 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
- .debug_line    0x00005157      0x1be CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_line    0x00004a2b      0x1be CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_line    0x00004be9      0x66b CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_line    0x00005254       0xc4 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
 
-.debug_str      0x00000000    0xe7c04
- .debug_str     0x00000000    0xe7c04 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj
+.debug_str      0x00000000    0xe7c05
+ .debug_str     0x00000000    0xe7c05 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj
                               0xe6976 (size before relaxing)
- .debug_str     0x000e7c04    0xe7398 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c.obj
- .debug_str     0x000e7c04    0xe6cf1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c.obj
- .debug_str     0x000e7c04    0xe6a34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c.obj
- .debug_str     0x000e7c04    0xe73b6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c.obj
- .debug_str     0x000e7c04    0xe6bc6 CMakeFiles/stm32_blinking_led.dir/Core/Src/main.c.obj
- .debug_str     0x000e7c04    0xe679e CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj
- .debug_str     0x000e7c04    0xe6835 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj
- .debug_str     0x000e7c04       0xc4 CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
- .debug_str     0x000e7c04    0xe67a8 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_str     0x000e7c04     0x2f3b CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
- .debug_str     0x000e7c04     0x2f21 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_str     0x000e7c05    0xe7398 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c.obj
+ .debug_str     0x000e7c05    0xe6cf1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c.obj
+ .debug_str     0x000e7c05    0xe6a34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c.obj
+ .debug_str     0x000e7c05    0xe73b6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c.obj
+ .debug_str     0x000e7c05    0xe6bc6 CMakeFiles/stm32_blinking_led.dir/Core/Src/main.c.obj
+ .debug_str     0x000e7c05    0xe679e CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj
+ .debug_str     0x000e7c05    0xe6835 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj
+ .debug_str     0x000e7c05       0xc4 CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj
+ .debug_str     0x000e7c05     0x2f21 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_str     0x000e7c05    0xe67a9 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_str     0x000e7c05     0x2f3b CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
 
 .debug_frame    0x00000000      0xff0
  .debug_frame   0x00000000       0x58 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj
@@ -3459,9 +3562,9 @@ LOAD linker stubs
  .debug_frame   0x00000c78       0xb0 CMakeFiles/stm32_blinking_led.dir/Core/Src/main.c.obj
  .debug_frame   0x00000d28      0x104 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj
  .debug_frame   0x00000e2c       0x38 CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj
- .debug_frame   0x00000e64       0x50 CMakeFiles/stm32_blinking_led.dir/app/features/featBlinky.c.obj
- .debug_frame   0x00000eb4       0x48 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
- .debug_frame   0x00000efc       0x48 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_frame   0x00000e64       0x48 CMakeFiles/stm32_blinking_led.dir/app/app.c.obj
+ .debug_frame   0x00000eac       0x50 CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj
+ .debug_frame   0x00000efc       0x48 CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj
  .debug_frame   0x00000f44       0x2c C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_aeabi_uldivmod.o)
  .debug_frame   0x00000f70       0x34 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+dp/hard\libgcc.a(_udivmoddi4.o)
  .debug_frame   0x00000fa4       0x20 C:/PROGRA~2/ARMGNU~1/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libg_nano.a(libc_a-memset.o)

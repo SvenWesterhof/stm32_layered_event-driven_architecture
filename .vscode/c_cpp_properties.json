@@ -11,7 +11,8 @@
                 "${workspaceFolder}/App/**",
                 "${workspaceFolder}/Drivers_custom",
                 "${workspaceFolder}/Drivers_custom/**",
-                "${workspaceFolder}/Hardware"
+                "${workspaceFolder}/Hardware",
+                "${workspaceFolder}/Hardware/**"
             ],
             "defines": [
                 "STM32F767xx",

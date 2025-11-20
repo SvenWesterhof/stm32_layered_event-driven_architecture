@@ -1,12 +1,12 @@
 #include "feature.h"
-#include "FeatBlinky.h"
+#include "feat_blinky.h"
 
-void Feature_Init(void)
+void feature_init(void)
 {
-    Blinky_Init();
+    blinky_init();
 }
 
-void Feature_Run(void)
+void feature_run(void)
 {
-    Blinky_Run();
+    blinky_run();
 }

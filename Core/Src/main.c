@@ -91,7 +91,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  App_Init();
+  app_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -99,7 +99,7 @@ int main(void)
   while (1)
   {
 
-    App_Run();
+    app_run();
 
     /* USER CODE END WHILE */
 
