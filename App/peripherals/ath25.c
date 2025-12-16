@@ -2,6 +2,14 @@
 
 #include "pinout.h"
 
+ath25_sensor_t default_ath25_sensor = {
+    .initialized = false,
+    .hi2c = NULL,
+    .i2c_address = 0x38 << 1, // Example I2C address
+    .power_port = TEMP_SENSOR_ON_OFF_PORT,
+    .power_pin = TEMP_SENSOR_ON_OFF_PIN,
+};
+
 void ath25_init() {
     // Initialize I2C, GPIOs, etc. for the temperature sensor
 }

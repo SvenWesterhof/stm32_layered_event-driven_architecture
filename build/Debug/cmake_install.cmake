@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/build/Debug/App/cmake_install.cmake")
+  include("C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/build/Debug/app/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

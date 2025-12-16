@@ -17,13 +17,7 @@ typedef struct {
     uint8_t resolution;              // sensor resolution (bits)
 } ath25_sensor_t;
 
-ath25_sensor_t default_ath25_sensor = {
-    .initialized = false,
-    .hi2c = NULL,
-    .i2c_address = 0x38 << 1, // Example I2C address
-    .power_port = TEMP_SENSOR_ON_OFF_PORT,
-    .power_pin = TEMP_SENSOR_ON_OFF_PIN,
-};
+extern ath25_sensor_t default_ath25_sensor;
 
 typedef struct {
     float temperature;
