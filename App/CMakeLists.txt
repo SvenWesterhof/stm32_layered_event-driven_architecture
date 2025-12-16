@@ -17,4 +17,5 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/features"
     "${CMAKE_CURRENT_SOURCE_DIR}/peripherals"
     "${CMAKE_CURRENT_SOURCE_DIR}/middleware"
+     "${CMAKE_SOURCE_DIR}/Drivers_custom"
 )
