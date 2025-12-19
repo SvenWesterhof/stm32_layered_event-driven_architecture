@@ -8,7 +8,13 @@
 
 HAL_StatusTypeDef ips_display_init() {
     ST7735_Init();
-    ST7735_FillScreen(ST7735_RED);
+    // Fill background
+    ST7735_FillScreen(ST7735_BLACK);
+
+    // Draw static labels
+    ST7735_WriteString(10, 10, "Temp: ", Font_11x18, ST7735_WHITE, ST7735_BLACK);
+    ST7735_WriteString(10, 40, "Hum:  ", Font_11x18, ST7735_WHITE, ST7735_BLACK);
+
     return HAL_OK;
 }
 
@@ -23,22 +29,21 @@ HAL_StatusTypeDef ips_display_close() {
 }
 
 HAL_StatusTypeDef ips_display_write_temp_data(float temperature, float humidity) {
-    char temp_str[20];
-    char hum_str[20];
+    char temp_val[10];
+    char hum_val[10];
 
-    // Clear the display
-    ST7735_FillScreen(ST7735_BLACK);
+    // Format the numeric values only
+    int temp_int = (int)temperature;
+    int temp_frac = (int)((temperature - temp_int) * 100);
+    snprintf(temp_val, sizeof(temp_val), "%d.%02d C", temp_int, temp_frac);
 
-    // Prepare temperature string
-    snprintf(temp_str, sizeof(temp_str), "Temp: %.2f C", temperature);
-    // Prepare humidity string
-    snprintf(hum_str, sizeof(hum_str), "Hum: %.2f %%", humidity);
+    int hum_int = (int)humidity;
+    int hum_frac = (int)((humidity - hum_int) * 100);
+    snprintf(hum_val, sizeof(hum_val), "%d.%02d %%", hum_int, hum_frac);
 
-    // Write temperature to display
-    ST7735_WriteString(10, 30, temp_str, Font_11x18, ST7735_WHITE, ST7735_BLACK);
-    // Write humidity to display
-    ST7735_WriteString(10, 60, hum_str, Font_11x18, ST7735_WHITE, ST7735_BLACK);
+    // Overwrite only the numeric values on the display
+    ST7735_WriteString(80, 10, temp_val, Font_11x18, ST7735_WHITE, ST7735_BLACK);
+    ST7735_WriteString(80, 40, hum_val, Font_11x18, ST7735_WHITE, ST7735_BLACK);
 
     return HAL_OK;
 }
-
