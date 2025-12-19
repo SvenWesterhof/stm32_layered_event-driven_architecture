@@ -1,4 +1,5 @@
 #include "feat_temperature_sensor.h"
+#include "ips_display.h"
 
 #include "main.h" // for temperature_sensor_on_off_GPIO_Port and temperature_sensor_on_off_Pin
 #include "peripherals/ath25.h"
@@ -27,12 +28,12 @@ void temperature_sensor_run(void)
     {
         if(ath25_read(temp_sensor, &data) == HAL_OK) {
             // Successfully read data, process it
-            float temperature = data.temperature;
-            float humidity = data.humidity;
-            // For example, you can log it or update a display
         } else {
             // Handle read error
         }
         last_read_time = now;
     }
+    float temperature = data.temperature;
+    float humidity = data.humidity;
+    ips_display_write_temp_data(temperature, humidity);
 }
