@@ -17,12 +17,10 @@
 #define ST7735_SPI_PORT hspi1
 extern SPI_HandleTypeDef ST7735_SPI_PORT;
 
-#define ST7735_RES_Pin       GPIO_PIN_7
-#define ST7735_RES_GPIO_Port GPIOC
-#define ST7735_CS_Pin        GPIO_PIN_6
-#define ST7735_CS_GPIO_Port  GPIOB
-#define ST7735_DC_Pin        GPIO_PIN_9
-#define ST7735_DC_GPIO_Port  GPIOA
+#define ST7735_CS_Pin        spi_display_cs_Pin
+#define ST7735_CS_GPIO_Port  spi_display_cs_GPIO_Port
+#define ST7735_DC_Pin        spi_display_dc_Pin
+#define ST7735_DC_GPIO_Port  spi_display_dc_GPIO_Port
 
 // AliExpress/eBay 1.8" display, default orientation
 /*
@@ -105,12 +103,14 @@ extern SPI_HandleTypeDef ST7735_SPI_PORT;
 */
 
 // 1.44" display, default orientation
+/*
 #define ST7735_IS_128X128 1
 #define ST7735_WIDTH  128
 #define ST7735_HEIGHT 128
 #define ST7735_XSTART 2
 #define ST7735_YSTART 3
 #define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MY | ST7735_MADCTL_BGR)
+*/
 
 // 1.44" display, rotate right
 /*
@@ -153,14 +153,14 @@ extern SPI_HandleTypeDef ST7735_SPI_PORT;
 */
 
 // mini 160x80, rotate left
-/*
+
 #define ST7735_IS_160X80 1
-#define ST7735_XSTART 1
-#define ST7735_YSTART 26
+#define ST7735_XSTART 24
+#define ST7735_YSTART 0
 #define ST7735_WIDTH  160
 #define ST7735_HEIGHT 80
 #define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MV | ST7735_MADCTL_BGR)
-*/
+
 
 // mini 160x80, rotate right 
 /*

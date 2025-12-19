@@ -94,9 +94,11 @@ void ST7735_Unselect() {
 }
 
 static void ST7735_Reset() {
-    HAL_GPIO_WritePin(ST7735_RES_GPIO_Port, ST7735_RES_Pin, GPIO_PIN_RESET);
+    // HAL_GPIO_WritePin(ST7735_RES_GPIO_Port, ST7735_RES_Pin, GPIO_PIN_RESET);
+    // HAL_Delay(5);
+    // HAL_GPIO_WritePin(ST7735_RES_GPIO_Port, ST7735_RES_Pin, GPIO_PIN_SET);
+    ST7735_WriteCommand(ST7735_SWRESET);
     HAL_Delay(5);
-    HAL_GPIO_WritePin(ST7735_RES_GPIO_Port, ST7735_RES_Pin, GPIO_PIN_SET);
 }
 
 static void ST7735_WriteCommand(uint8_t cmd) {
