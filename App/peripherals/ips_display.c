@@ -29,17 +29,12 @@ HAL_StatusTypeDef ips_display_close() {
 }
 
 HAL_StatusTypeDef ips_display_write_temp_data(float temperature, float humidity) {
-    char temp_val[10];
-    char hum_val[10];
+    char temp_val[16];
+    char hum_val[16];
 
-    // Format the numeric values only
-    int temp_int = (int)temperature;
-    int temp_frac = (int)((temperature - temp_int) * 100);
-    snprintf(temp_val, sizeof(temp_val), "%d.%02d C", temp_int, temp_frac);
-
-    int hum_int = (int)humidity;
-    int hum_frac = (int)((humidity - hum_int) * 100);
-    snprintf(hum_val, sizeof(hum_val), "%d.%02d %%", hum_int, hum_frac);
+    // Format the numeric values using floats
+    snprintf(temp_val, sizeof(temp_val), "%.2f C", temperature);
+    snprintf(hum_val, sizeof(hum_val), "%.2f %%", humidity);
 
     // Overwrite only the numeric values on the display
     ST7735_WriteString(80, 10, temp_val, Font_11x18, ST7735_WHITE, ST7735_BLACK);
