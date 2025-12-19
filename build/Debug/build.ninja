@@ -51,99 +51,211 @@ build cmake_object_order_depends_target_stm32_development: phony || cmake_object
 
 build CMakeFiles/stm32_development.dir/Core/Src/main.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/Core/Src/main.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\Core\Src\main.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\Core\Src
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\Core\Src\main.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\Core\Src
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/Core/Src/stm32f7xx_it.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/Core/Src/stm32f7xx_it.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\Core\Src\stm32f7xx_it.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\Core\Src
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\Core\Src\stm32f7xx_it.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\Core\Src
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/Core/Src/stm32f7xx_hal_msp.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/Core/Src/stm32f7xx_hal_msp.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\Core\Src\stm32f7xx_hal_msp.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\Core\Src
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\Core\Src\stm32f7xx_hal_msp.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\Core\Src
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/Core/Src/sysmem.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/Core/Src/sysmem.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\Core\Src\sysmem.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\Core\Src
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\Core\Src\sysmem.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\Core\Src
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/Core/Src/syscalls.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/Core/Src/syscalls.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\Core\Src\syscalls.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\Core\Src
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\Core\Src\syscalls.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\Core\Src
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/startup_stm32f767xx.s.obj: ASM_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/startup_stm32f767xx.s || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\startup_stm32f767xx.s.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\startup_stm32f767xx.s.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/app/app.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/app/app.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\app\app.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\app
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\app\app.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\app
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/app/features/feat_blinky.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/app/features/feat_blinky.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\app\features\feat_blinky.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\app\features
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\app\features\feat_blinky.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\app\features
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/app/features/feat_temperature_sensor.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/app/features/feat_temperature_sensor.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\app\features\feat_temperature_sensor.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\app\features
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\app\features\feat_temperature_sensor.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\app\features
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/app/features/feature.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/app/features/feature.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\app\features\feature.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\app\features
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\app\features\feature.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\app\features
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/app/peripherals/ath25.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals/ath25.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\app\peripherals\ath25.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\app\peripherals
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\app\peripherals\ath25.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\app\peripherals
+>>>>>>> master
 
 build CMakeFiles/stm32_development.dir/app/peripherals/ips_display.c.obj: C_COMPILER__stm32_development_unscanned_Debug C$:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals/ips_display.c || cmake_object_order_depends_target_stm32_development
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+<<<<<<< HEAD
   DEP_FILE = CMakeFiles\stm32_development.dir\app\peripherals\ips_display.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/control -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/features -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/peripherals -IC:/Users/svenw/Documents/stm_specialization/stm32_development/app/middleware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32_development.dir\app\peripherals
+=======
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\app\peripherals\ips_display.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\app\peripherals
+
+build CMakeFiles/stm32_blinking_led.dir/Drivers_custom/ST7735/fonts.c.obj: C_COMPILER__stm32_blinking_led_unscanned_Debug C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom/ST7735/fonts.c || cmake_object_order_depends_target_stm32_blinking_led
+  DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\Drivers_custom\ST7735\fonts.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\Drivers_custom\ST7735
+
+build CMakeFiles/stm32_blinking_led.dir/Drivers_custom/ST7735/st7735.c.obj: C_COMPILER__stm32_blinking_led_unscanned_Debug C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom/ST7735/st7735.c || cmake_object_order_depends_target_stm32_blinking_led
+  DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\stm32_blinking_led.dir\Drivers_custom\ST7735\st7735.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/control -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/features -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/peripherals -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/middleware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32_blinking_led.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32_blinking_led.dir\Drivers_custom\ST7735
+>>>>>>> master
 
 
 # =============================================================================
@@ -153,15 +265,26 @@ build CMakeFiles/stm32_development.dir/app/peripherals/ips_display.c.obj: C_COMP
 #############################################
 # Link the executable stm32_development.elf
 
+<<<<<<< HEAD
 build stm32_development.elf: C_EXECUTABLE_LINKER__stm32_development_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c.obj CMakeFiles/stm32_development.dir/Core/Src/main.c.obj CMakeFiles/stm32_development.dir/Core/Src/stm32f7xx_it.c.obj CMakeFiles/stm32_development.dir/Core/Src/stm32f7xx_hal_msp.c.obj CMakeFiles/stm32_development.dir/Core/Src/sysmem.c.obj CMakeFiles/stm32_development.dir/Core/Src/syscalls.c.obj CMakeFiles/stm32_development.dir/startup_stm32f767xx.s.obj CMakeFiles/stm32_development.dir/app/app.c.obj CMakeFiles/stm32_development.dir/app/features/feat_blinky.c.obj CMakeFiles/stm32_development.dir/app/features/feat_temperature_sensor.c.obj CMakeFiles/stm32_development.dir/app/features/feature.c.obj CMakeFiles/stm32_development.dir/app/peripherals/ath25.c.obj CMakeFiles/stm32_development.dir/app/peripherals/ips_display.c.obj || cmake/stm32cubemx/STM32_Drivers
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3
   LINK_FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -T "C:/Users/svenw/Documents/stm_specialization/stm32_development/STM32F767XX_FLASH.ld" --specs=nano.specs -Wl,-Map=stm32_development.map -Wl,--gc-sections -Wl,--print-memory-usage
+=======
+build stm32_blinking_led.elf: C_EXECUTABLE_LINKER__stm32_blinking_led_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi_ex.c.obj CMakeFiles/stm32_blinking_led.dir/Core/Src/main.c.obj CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_it.c.obj CMakeFiles/stm32_blinking_led.dir/Core/Src/stm32f7xx_hal_msp.c.obj CMakeFiles/stm32_blinking_led.dir/Core/Src/sysmem.c.obj CMakeFiles/stm32_blinking_led.dir/Core/Src/syscalls.c.obj CMakeFiles/stm32_blinking_led.dir/startup_stm32f767xx.s.obj CMakeFiles/stm32_blinking_led.dir/app/app.c.obj CMakeFiles/stm32_blinking_led.dir/app/features/feat_blinky.c.obj CMakeFiles/stm32_blinking_led.dir/app/features/feat_temperature_sensor.c.obj CMakeFiles/stm32_blinking_led.dir/app/features/feature.c.obj CMakeFiles/stm32_blinking_led.dir/app/peripherals/ath25.c.obj CMakeFiles/stm32_blinking_led.dir/app/peripherals/ips_display.c.obj CMakeFiles/stm32_blinking_led.dir/Drivers_custom/ST7735/fonts.c.obj CMakeFiles/stm32_blinking_led.dir/Drivers_custom/ST7735/st7735.c.obj || cmake/stm32cubemx/STM32_Drivers
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3
+  LINK_FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -T "C:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/STM32F767XX_FLASH.ld" --specs=nano.specs -Wl,-Map=stm32_blinking_led.map -Wl,--gc-sections -Wl,--print-memory-usage    -u _printf_float
+>>>>>>> master
   LINK_LIBRARIES = -lm
   OBJECT_DIR = CMakeFiles\stm32_development.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+<<<<<<< HEAD
   TARGET_FILE = stm32_development.elf
   TARGET_PDB = stm32_development.elf.dbg
+=======
+  TARGET_FILE = stm32_blinking_led.elf
+  TARGET_PDB = stm32_blinking_led.elf.dbg
+>>>>>>> master
 
 
 #############################################
@@ -205,7 +328,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Core\Src\system_stm32f7xx.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Core\Src
 
@@ -213,7 +340,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_cortex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -221,7 +352,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_i2c.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -229,7 +364,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_i2c_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -237,7 +376,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -245,7 +388,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -253,7 +400,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_flash.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -261,7 +412,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_flash_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -269,7 +424,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_gpio.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -277,7 +436,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -285,7 +448,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -293,7 +460,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -301,7 +472,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr_ex.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -309,7 +484,11 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -317,7 +496,27 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
   DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_exti.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+<<<<<<< HEAD
   INCLUDES = -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+=======
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi.c || cmake_object_order_depends_target_STM32_Drivers
+  DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_spi.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi_ex.c || cmake_object_order_depends_target_STM32_Drivers
+  DEFINES = -DDEBUG -DSTM32F767xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_spi_ex.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Core/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F7xx/Include -IC:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+>>>>>>> master
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F7xx_HAL_Driver\Src
 
@@ -326,7 +525,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL
 #############################################
 # Object library STM32_Drivers
 
-build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c.obj
+build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f7xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_spi_ex.c.obj
 
 
 #############################################
@@ -491,14 +690,22 @@ build cmake/stm32cubemx/all: phony cmake/stm32cubemx/STM32_Drivers
 #############################################
 # Re-run CMake if any of its inputs changed.
 
+<<<<<<< HEAD
 build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake C$:/Users/svenw/Documents/stm_specialization/stm32_development/CMakeLists.txt C$:/Users/svenw/Documents/stm_specialization/stm32_development/Drivers_custom/CMakeLists.txt C$:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware/CMakeLists.txt C$:/Users/svenw/Documents/stm_specialization/stm32_development/app/CMakeLists.txt C$:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/gcc-arm-none-eabi.cmake C$:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.0-rc3/CMakeASMCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeSystem.cmake
+=======
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/gcc-arm-none-eabi.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.0-rc3/CMakeASMCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeSystem.cmake
+>>>>>>> master
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
+<<<<<<< HEAD
 build C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake C$:/Users/svenw/Documents/stm_specialization/stm32_development/CMakeLists.txt C$:/Users/svenw/Documents/stm_specialization/stm32_development/Drivers_custom/CMakeLists.txt C$:/Users/svenw/Documents/stm_specialization/stm32_development/Hardware/CMakeLists.txt C$:/Users/svenw/Documents/stm_specialization/stm32_development/app/CMakeLists.txt C$:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/gcc-arm-none-eabi.cmake C$:/Users/svenw/Documents/stm_specialization/stm32_development/cmake/stm32cubemx/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.0-rc3/CMakeASMCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeSystem.cmake: phony
+=======
+build C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Drivers_custom/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/Hardware/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/app/CMakeLists.txt C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/gcc-arm-none-eabi.cmake C$:/Users/svenw/Documents/cubeIDE_specialization/stm32_blinking_led/cmake/stm32cubemx/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.0-rc3/CMakeASMCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/3.28.0-rc3/CMakeSystem.cmake: phony
+>>>>>>> master
 
 
 #############################################
