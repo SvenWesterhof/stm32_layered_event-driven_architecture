@@ -2,6 +2,7 @@
 
 #include "main.h" // for temperature_sensor_on_off_GPIO_Port and temperature_sensor_on_off_Pin
 #include "peripherals/ath25.h"
+#include "peripherals/ips_display.h"
 
 ath25_sensor_t* temp_sensor = &default_ath25_sensor;
 extern I2C_HandleTypeDef hi2c2;
@@ -15,6 +16,7 @@ void temperature_sensor_init(void)
     if(ath25_open(temp_sensor, &hi2c2) != HAL_OK) {
         // Handle error
     }
+    ips_display_init();
 }
 
 void temperature_sensor_run(void)
@@ -29,7 +31,7 @@ void temperature_sensor_run(void)
             // Successfully read data, process it
             float temperature = data.temperature;
             float humidity = data.humidity;
-            // For example, you can log it or update a display
+            ips_display_write_temp_data(temperature, humidity);
         } else {
             // Handle read error
         }

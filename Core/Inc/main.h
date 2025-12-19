@@ -56,8 +56,14 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define spi_display_cs_Pin GPIO_PIN_12
+#define spi_display_cs_GPIO_Port GPIOF
 #define externalLed_Pin GPIO_PIN_15
 #define externalLed_GPIO_Port GPIOF
+#define spi_display_bled_Pin GPIO_PIN_14
+#define spi_display_bled_GPIO_Port GPIOD
+#define spi_display_dc_Pin GPIO_PIN_15
+#define spi_display_dc_GPIO_Port GPIOD
 #define temperature_sensor_on_off_Pin GPIO_PIN_14
 #define temperature_sensor_on_off_GPIO_Port GPIOG
 
