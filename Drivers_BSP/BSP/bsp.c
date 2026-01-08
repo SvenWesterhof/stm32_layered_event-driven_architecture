@@ -1,4 +1,5 @@
 #include "bsp.h"
+#include "hal_gpio.h"
 
 /**
  * @brief Initialize the Board Support Package
@@ -34,7 +35,7 @@ void BSP_LED_Init(void)
  */
 void BSP_LED_On(void)
 {
-    HAL_GPIO_WritePin(EXT_LED_GPIO_PORT, EXT_LED_PIN, GPIO_PIN_SET);
+    hal_gpio_write_pin((hal_gpio_port_t)EXT_LED_GPIO_PORT, EXT_LED_PIN, HAL_GPIO_PIN_SET);
 }
 
 /**
@@ -42,7 +43,7 @@ void BSP_LED_On(void)
  */
 void BSP_LED_Off(void)
 {
-    HAL_GPIO_WritePin(EXT_LED_GPIO_PORT, EXT_LED_PIN, GPIO_PIN_RESET);
+    hal_gpio_write_pin((hal_gpio_port_t)EXT_LED_GPIO_PORT, EXT_LED_PIN, HAL_GPIO_PIN_RESET);
 }
 
 /**
@@ -50,5 +51,5 @@ void BSP_LED_Off(void)
  */
 void BSP_LED_Toggle(void)
 {
-    HAL_GPIO_TogglePin(EXT_LED_GPIO_PORT, EXT_LED_PIN);
+    hal_gpio_toggle_pin((hal_gpio_port_t)EXT_LED_GPIO_PORT, EXT_LED_PIN);
 }

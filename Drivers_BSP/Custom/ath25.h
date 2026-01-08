@@ -1,8 +1,9 @@
 #ifndef ATH25_H
 #define ATH25_H
 
-#include "stm32f7xx_hal.h"
-#include "stm32f7xx_hal_i2c.h"
+#include "hal_i2c.h"
+#include "hal_gpio.h"
+#include "hal_delay.h"
 #include "pinout.h"
 #include <stdbool.h>
 
@@ -10,11 +11,11 @@
 
 typedef struct {
     bool initialized;
-    I2C_HandleTypeDef *hi2c;   // I2C handle
-    uint8_t i2c_address;  // I2C address of the temperature sensor
-    GPIO_TypeDef *power_port;        // power control pin
-    uint16_t power_pin;              // power control pin
-    uint8_t resolution;              // sensor resolution (bits)
+    hal_i2c_handle_t hi2c;        // I2C handle
+    uint8_t i2c_address;              // I2C address of the temperature sensor
+    hal_gpio_port_t power_port;       // power control pin port
+    hal_gpio_pin_t power_pin;         // power control pin number
+    uint8_t resolution;               // sensor resolution (bits)
 } ath25_sensor_t;
 
 extern ath25_sensor_t default_ath25_sensor;
@@ -30,12 +31,12 @@ typedef struct {
 void ath25_init();
 
 // Open a connection  and enable the temperature sensor
-HAL_StatusTypeDef ath25_open(ath25_sensor_t *sensor, I2C_HandleTypeDef *hi2c);
+hal_i2c_status_t ath25_open(ath25_sensor_t *sensor, hal_i2c_handle_t hi2c);
 
 // Read the current temperature value from the sensor
-HAL_StatusTypeDef ath25_read(ath25_sensor_t *sensor, ath_data_t *data);
+hal_i2c_status_t ath25_read(ath25_sensor_t *sensor, ath_data_t *data);
 
 // Close the connection and disable the temperature sensor
-HAL_StatusTypeDef ath25_close(ath25_sensor_t *sensor);
+hal_i2c_status_t ath25_close(ath25_sensor_t *sensor);
 
 #endif // ATH25_H

@@ -1,12 +1,11 @@
 #include "ath25.h"
-
 #include "pinout.h"
 
 ath25_sensor_t default_ath25_sensor = {
     .initialized = false,
     .hi2c = NULL,
     .i2c_address = 0x38 << 1, // Example I2C address
-    .power_port = TEMP_SENSOR_ON_OFF_PORT,
+    .power_port = (hal_gpio_port_t)TEMP_SENSOR_ON_OFF_PORT,
     .power_pin = TEMP_SENSOR_ON_OFF_PIN,
 };
 
@@ -30,7 +29,7 @@ static uint8_t ath25_crc8(uint8_t *data, uint8_t len)
     return crc;
 }
 
-HAL_StatusTypeDef ath25_open(ath25_sensor_t *sensor, I2C_HandleTypeDef *hi2c) {
+hal_i2c_status_t ath25_open(ath25_sensor_t *sensor, hal_i2c_handle_t hi2c) {
     uint8_t cmd = 0x71; 
     uint8_t status; 
 
@@ -38,52 +37,52 @@ HAL_StatusTypeDef ath25_open(ath25_sensor_t *sensor, I2C_HandleTypeDef *hi2c) {
     sensor->initialized = false; 
     
     // Power on the sensor
-    HAL_GPIO_WritePin(sensor->power_port, sensor->power_pin, GPIO_PIN_SET);
-    HAL_Delay(100); // wait for sensor to power up
+    hal_gpio_write_pin(sensor->power_port, sensor->power_pin, HAL_GPIO_PIN_SET);
+    hal_delay_ms(100); // wait for sensor to power up
 
     // Check sensor status
-    if (HAL_I2C_Master_Transmit(sensor->hi2c, sensor->i2c_address, &cmd, 1, MAX_ATH25_I2C_TRANSFER_TIME) != HAL_OK) {
-        return HAL_ERROR;
+    if (hal_i2c_master_transmit(sensor->hi2c, sensor->i2c_address, &cmd, 1, MAX_ATH25_I2C_TRANSFER_TIME) != HAL_I2C_OK) {
+        return HAL_I2C_ERROR;
     }
-    if (HAL_I2C_Master_Receive(sensor->hi2c, sensor->i2c_address, &status, 1, MAX_ATH25_I2C_TRANSFER_TIME) != HAL_OK) {
-        return HAL_ERROR;
+    if (hal_i2c_master_receive(sensor->hi2c, sensor->i2c_address, &status, 1, MAX_ATH25_I2C_TRANSFER_TIME) != HAL_I2C_OK) {
+        return HAL_I2C_ERROR;
     }
 
         // Check calibration bits must be 0x18
     if ((status & 0x18) != 0x18) {
         // Normally you'd write registers 0x1B, 0x1C, 0x1E here
         // Manufacturer: "see sample program". Many modules ship pre-calibrated.
-        return HAL_ERROR;
+        return HAL_I2C_ERROR;
     }
     sensor->initialized = true;
-    return HAL_OK;
+    return HAL_I2C_OK;
 }
 
-HAL_StatusTypeDef ath25_read(ath25_sensor_t *sensor, ath_data_t *data) {
+hal_i2c_status_t ath25_read(ath25_sensor_t *sensor, ath_data_t *data) {
     uint8_t cmd[3] = {0xAC, 0x33, 0x00};
     uint8_t recv[7];
     // Read temperature value from the sensor
     if (sensor->initialized == false) {
-        return HAL_ERROR;
+        return HAL_I2C_ERROR;
     }
 
-    if (HAL_I2C_Master_Transmit(sensor->hi2c, sensor->i2c_address, cmd, 3, MAX_ATH25_I2C_TRANSFER_TIME) != HAL_OK) {
-        return HAL_ERROR;
+    if (hal_i2c_master_transmit(sensor->hi2c, sensor->i2c_address, cmd, 3, MAX_ATH25_I2C_TRANSFER_TIME) != HAL_I2C_OK) {
+        return HAL_I2C_ERROR;
     }
 
-    HAL_Delay(80); // wait for measurement to complete
+    hal_delay_ms(80); // wait for measurement to complete
 
-    if (HAL_I2C_Master_Receive(sensor->hi2c, sensor->i2c_address, recv, 7, MAX_ATH25_I2C_TRANSFER_TIME) != HAL_OK) {
-        return HAL_ERROR;
+    if (hal_i2c_master_receive(sensor->hi2c, sensor->i2c_address, recv, 7, MAX_ATH25_I2C_TRANSFER_TIME) != HAL_I2C_OK) {
+        return HAL_I2C_ERROR;
     }
 
         // Check if busy bit clear
     if (recv[0] & 0x80)
-        return HAL_BUSY;
+        return HAL_I2C_BUSY;
 
     // Verify CRC
     if (ath25_crc8(recv, 6) != recv[6]) {
-        return HAL_ERROR;
+        return HAL_I2C_ERROR;
     }
 
     //combine bytes to get raw temperature and humidity
@@ -94,16 +93,16 @@ HAL_StatusTypeDef ath25_read(ath25_sensor_t *sensor, ath_data_t *data) {
     data->temperature = ((float)raw_temp / 1048576.0f) * 200.0f - 50.0f; // -50 to 150 C
     data->humidity = ((float)raw_hum / 1048576.0f) * 100.0f; // 0 to 100 %
 
-    return HAL_OK;
+    return HAL_I2C_OK;
 }
 
-HAL_StatusTypeDef ath25_close(ath25_sensor_t *sensor) {
+hal_i2c_status_t ath25_close(ath25_sensor_t *sensor) {
     // Close connection to the temperature sensor
     if (sensor->initialized == false) {
-        return HAL_ERROR;
+        return HAL_I2C_ERROR;
     }
     // Power off the sensor
-    HAL_GPIO_WritePin(sensor->power_port, sensor->power_pin, GPIO_PIN_RESET);
+    hal_gpio_write_pin(sensor->power_port, sensor->power_pin, HAL_GPIO_PIN_RESET);
     sensor->initialized = false;
-    return HAL_OK;
+    return HAL_I2C_OK;
 }

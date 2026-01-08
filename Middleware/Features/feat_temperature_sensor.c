@@ -13,7 +13,7 @@ static const uint32_t read_interval_ms = 1000; // read every second
 void temperature_sensor_init(void)
 {
     ath25_init();
-    if(ath25_open(temp_sensor, &hi2c2) != HAL_OK) {
+    if(ath25_open(temp_sensor, (hal_i2c_handle_t)&hi2c2) != HAL_I2C_OK) {
         // Handle error
     }
     ips_display_init();
@@ -27,7 +27,7 @@ void temperature_sensor_run(void)
     uint32_t now = HAL_GetTick();
     if ((now - last_read_time) >= read_interval_ms)
     {
-        if(ath25_read(temp_sensor, &data) == HAL_OK) {
+        if(ath25_read(temp_sensor, &data) == HAL_I2C_OK) {
             // Successfully read data, process it
             float temperature = data.temperature;
             float humidity = data.humidity;

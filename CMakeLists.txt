@@ -39,6 +39,7 @@ add_subdirectory(cmake/stm32cubemx)
 # New layered architecture subdirectories
 add_subdirectory(Application)
 add_subdirectory(Middleware)
+add_subdirectory(HAL)
 add_subdirectory(Drivers_BSP)
 add_subdirectory(OS)
 

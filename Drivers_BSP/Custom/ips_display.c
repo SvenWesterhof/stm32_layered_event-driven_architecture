@@ -5,7 +5,7 @@
 #include "st7735.h"
 
 
-HAL_StatusTypeDef ips_display_init() {
+ips_display_status_t ips_display_init() {
     ST7735_Init();
     // Fill background
     ST7735_FillScreen(ST7735_BLACK);
@@ -14,20 +14,20 @@ HAL_StatusTypeDef ips_display_init() {
     ST7735_WriteString(10, 10, "Temp: ", Font_11x18, ST7735_WHITE, ST7735_BLACK);
     ST7735_WriteString(10, 40, "Hum:  ", Font_11x18, ST7735_WHITE, ST7735_BLACK);
 
-    return HAL_OK;
+    return IPS_DISPLAY_OK;
 }
 
-HAL_StatusTypeDef ips_display_open() {
+ips_display_status_t ips_display_open() {
     // Any additional setup can be done here
-    return HAL_OK;
+    return IPS_DISPLAY_OK;
 }
 
-HAL_StatusTypeDef ips_display_close() {
+ips_display_status_t ips_display_close() {
     // Any cleanup can be done here
-    return HAL_OK;
+    return IPS_DISPLAY_OK;
 }
 
-HAL_StatusTypeDef ips_display_write_temp_data(float temperature, float humidity) {
+ips_display_status_t ips_display_write_temp_data(float temperature, float humidity) {
     char temp_val[16];
     char hum_val[16];
 
@@ -39,5 +39,5 @@ HAL_StatusTypeDef ips_display_write_temp_data(float temperature, float humidity)
     ST7735_WriteString(80, 10, temp_val, Font_11x18, ST7735_WHITE, ST7735_BLACK);
     ST7735_WriteString(80, 40, hum_val, Font_11x18, ST7735_WHITE, ST7735_BLACK);
 
-    return HAL_OK;
+    return IPS_DISPLAY_OK;
 }

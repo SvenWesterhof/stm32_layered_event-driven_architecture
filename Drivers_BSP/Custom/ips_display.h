@@ -1,13 +1,18 @@
 #ifndef IPS_DISPLAY_H
 #define IPS_DISPLAY_H
 
-#include "stm32f7xx_hal.h"
+#include "hal_spi.h"
 
-HAL_StatusTypeDef ips_display_init();
-HAL_StatusTypeDef ips_display_open();
-HAL_StatusTypeDef ips_display_close();
+typedef enum {
+    IPS_DISPLAY_OK = 0,
+    IPS_DISPLAY_ERROR
+} ips_display_status_t;
 
-HAL_StatusTypeDef ips_display_write_temp_data(float temperature, float humidity);
+ips_display_status_t ips_display_init();
+ips_display_status_t ips_display_open();
+ips_display_status_t ips_display_close();
+
+ips_display_status_t ips_display_write_temp_data(float temperature, float humidity);
 
 
 #endif // IPS_DISPLAY_H

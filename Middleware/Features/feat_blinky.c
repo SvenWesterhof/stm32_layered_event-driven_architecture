@@ -1,6 +1,7 @@
 #include "feat_blinky.h"
 #include "main.h" // for externalLed_GPIO_Port and externalLed_Pin
-#include "stm32f7xx_hal.h"
+#include "hal_gpio.h"
+#include "hal_delay.h"
 
 static uint32_t last_toggle = 0;
 static uint32_t interval_ms = 2000;
@@ -8,15 +9,15 @@ static uint32_t interval_ms = 2000;
 void blinky_init(void)
 {
     // Nothing to init for now, GPIO already initialized in MX_GPIO_Init
-    last_toggle = HAL_GetTick();
+    last_toggle = hal_get_tick();
 }
 
 void blinky_run(void)
 {
-    uint32_t now = HAL_GetTick();
+    uint32_t now = hal_get_tick();
     if ((now - last_toggle) >= interval_ms)
     {
-        HAL_GPIO_TogglePin(externalLed_GPIO_Port, externalLed_Pin);
+        hal_gpio_toggle_pin((hal_gpio_port_t)externalLed_GPIO_Port, externalLed_Pin);
         last_toggle = now;
     }
 }
