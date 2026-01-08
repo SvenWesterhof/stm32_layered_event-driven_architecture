@@ -1,0 +1,54 @@
+#include "bsp.h"
+
+/**
+ * @brief Initialize the Board Support Package
+ * 
+ * This function performs board-level initialization.
+ * Called early in the boot process.
+ */
+void BSP_Init(void)
+{
+    // Board-specific initialization
+    // Note: HAL and system clocks are already initialized by SystemClock_Config()
+    
+    // Initialize board LEDs
+    BSP_LED_Init();
+    
+    // Add other board-specific initialization here
+    // - External oscillators
+    // - Power management
+    // - Board-specific peripherals
+}
+
+/**
+ * @brief Initialize board LEDs
+ */
+void BSP_LED_Init(void)
+{
+    // GPIO for LED is initialized in MX_GPIO_Init() from Core/
+    // This function can add additional LED-specific setup if needed
+}
+
+/**
+ * @brief Turn on the board LED
+ */
+void BSP_LED_On(void)
+{
+    HAL_GPIO_WritePin(EXT_LED_GPIO_PORT, EXT_LED_PIN, GPIO_PIN_SET);
+}
+
+/**
+ * @brief Turn off the board LED
+ */
+void BSP_LED_Off(void)
+{
+    HAL_GPIO_WritePin(EXT_LED_GPIO_PORT, EXT_LED_PIN, GPIO_PIN_RESET);
+}
+
+/**
+ * @brief Toggle the board LED
+ */
+void BSP_LED_Toggle(void)
+{
+    HAL_GPIO_TogglePin(EXT_LED_GPIO_PORT, EXT_LED_PIN);
+}

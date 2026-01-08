@@ -36,10 +36,11 @@ add_executable(${CMAKE_PROJECT_NAME})
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
 
-#custom subdirectories
-add_subdirectory(App)
-add_subdirectory(Drivers_custom)
-add_subdirectory(Hardware)
+# New layered architecture subdirectories
+add_subdirectory(Application)
+add_subdirectory(Middleware)
+add_subdirectory(Drivers_BSP)
+add_subdirectory(OS)
 
 
 # Link directories setup
