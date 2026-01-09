@@ -2,7 +2,7 @@
 
 Een productie-grade embedded firmware project dat industry best practices demonstreert voor de STM32F767 microcontroller met volledige architecturele scheiding, event-driven ontwerp en complete portabiliteit.
 
-## 🎯 Projectoverzicht
+## Projectoverzicht
 
 Dit project implementeert een temperatuurmonitoringsysteem met displayuitvoer en LED-besturing, waarbij een "layered event-driven architecture wordt getoond.
 
@@ -15,7 +15,7 @@ Dit project implementeert een temperatuurmonitoringsysteem met displayuitvoer en
 
 ---
 
-## 🏗️ Architectuur
+## Architectuur
 
 Het project volgt architectuur met strikte afhankelijkheden die alleen naar beneden gelden, wat zorgt voor lage koppeling en hoge portabiliteit.
 
@@ -52,7 +52,7 @@ Het project volgt architectuur met strikte afhankelijkheden die alleen naar bene
 
 ---
 
-## ✨ Belangrijkste Sterke Punten
+## Belangrijkste Sterke Punten
 
 ### 1. **Volledige Scheiding van Verantwoordelijkheden (Separation of Concerns)**
 
@@ -132,7 +132,7 @@ Klaar voor uitbreiding:
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```
 stm32_development/
@@ -195,17 +195,6 @@ stm32_development/
 3. **Hardware Abstraction** - Platform independence
 4. **Service-Oriented** - Modular capabilities
 5. **Dependency Inversion** - Upper layers depend on abstractions, not concretions
-
----
-
-## Code Quality Features
-
-- ✅ No global variables in application/middleware (encapsulated in services)
-- ✅ No magic numbers (all constants defined)
-- ✅ Clear naming conventions (serv_, BSP_, hal_ prefixes)
-- ✅ Comprehensive comments and documentation
-- ✅ Type safety with abstraction types
-- ✅ Error handling at all layers
 
 ---
 
