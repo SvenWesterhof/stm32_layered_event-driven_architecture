@@ -1,5 +1,6 @@
 #include "serv_temperature_sensor.h"
-#include "ips_display.h"
+#include "event_bus.h"
+#include "service_events.h"
 
 #include "main.h" // for temperature_sensor_on_off_GPIO_Port and temperature_sensor_on_off_Pin
 #include "ath25.h"
@@ -16,24 +17,32 @@ void temperature_sensor_init(void)
     if(ath25_open(temp_sensor, (hal_i2c_handle_t)&hi2c2) != HAL_I2C_OK) {
         // Handle error
     }
-    ips_display_init();
 }
 
 void temperature_sensor_run(void)
 {
-    // Implement the functionality to read temperature data and process it
-    ath_data_t data;
-    // read temperature sensor and humidity every second   
+    // Read temperature sensor and humidity every second   
     uint32_t now = hal_get_tick();
     if ((now - last_read_time) >= read_interval_ms)
     {
+        ath_data_t data;
+        temperature_data_t temp_event_data;
+        
         if(ath25_read(temp_sensor, &data) == HAL_I2C_OK) {
-            // Successfully read data, process it
-            float temperature = data.temperature;
-            float humidity = data.humidity;
-            ips_display_write_temp_data(temperature, humidity);
+            // Successfully read data, publish event
+            temp_event_data.temperature = data.temperature;
+            temp_event_data.humidity = data.humidity;
+            temp_event_data.sensor_ok = 1;
+            
+            // Publish event to notify subscribers
+            event_bus_publish(EVENT_TEMPERATURE_UPDATED, &temp_event_data, sizeof(temperature_data_t));
         } else {
-            // Handle read error
+            // Handle read error - publish error event
+            temp_event_data.temperature = 0.0f;
+            temp_event_data.humidity = 0.0f;
+            temp_event_data.sensor_ok = 0;
+            
+            event_bus_publish(EVENT_SENSOR_ERROR, &temp_event_data, sizeof(temperature_data_t));
         }
         last_read_time = now;
     }

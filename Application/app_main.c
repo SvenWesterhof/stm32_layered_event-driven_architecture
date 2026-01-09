@@ -1,20 +1,21 @@
 #include "app_main.h"
-#include "control.h"
 #include "services.h"
-#include "peripheral.h"
+#include "event_bus.h"
 
 void app_init(void)
 {
-    //Peripheral_Init();
-    //Control_Init();
-    services_init();
+    // Initialize event bus first
+    event_bus_init();
     
+    // Initialize services (including display service which subscribes to events)
+    services_init();
 }
 
 void app_run(void)
 {
-    //Peripheral_Run();
-    //Control_Run();
+    // Run services (they publish events)
     services_run();
-
+    
+    // Process any pending events
+    event_bus_process();
 }
