@@ -1,5 +1,5 @@
 #include "event_bus.h"
-#include "stm32f7xx_hal.h"
+#include "hal_delay.h"
 #include <string.h>
 
 // Event Queue
@@ -153,5 +153,5 @@ void event_bus_process(void)
  */
 uint32_t event_bus_get_tick(void)
 {
-    return HAL_GetTick();
+    return hal_get_tick();
 }

@@ -14,6 +14,7 @@
 
 #include "stm32f7xx_hal.h"
 #include "pinout.h"
+#include "hal_i2c.h"
 
 // BSP Initialization
 void BSP_Init(void);
@@ -23,5 +24,8 @@ void BSP_LED_Init(void);
 void BSP_LED_On(void);
 void BSP_LED_Off(void);
 void BSP_LED_Toggle(void);
+
+// Peripheral access functions
+hal_i2c_handle_t BSP_Get_TempSensor_I2C(void);
 
 #endif // BSP_H

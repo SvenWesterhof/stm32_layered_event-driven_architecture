@@ -1,12 +1,10 @@
 #include "serv_temperature_sensor.h"
 #include "event_bus.h"
 #include "service_events.h"
-
-#include "main.h" // for temperature_sensor_on_off_GPIO_Port and temperature_sensor_on_off_Pin
 #include "ath25.h"
+#include "bsp.h"
 
 ath25_sensor_t* temp_sensor = &default_ath25_sensor;
-extern I2C_HandleTypeDef hi2c2;
 
 static uint32_t last_read_time = 0;
 static const uint32_t read_interval_ms = 1000; // read every second
@@ -14,7 +12,7 @@ static const uint32_t read_interval_ms = 1000; // read every second
 void temperature_sensor_init(void)
 {
     ath25_init();
-    if(ath25_open(temp_sensor, (hal_i2c_handle_t)&hi2c2) != HAL_I2C_OK) {
+    if(ath25_open(temp_sensor, BSP_Get_TempSensor_I2C()) != HAL_I2C_OK) {
         // Handle error
     }
 }

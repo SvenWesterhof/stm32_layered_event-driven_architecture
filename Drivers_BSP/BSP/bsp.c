@@ -1,5 +1,8 @@
 #include "bsp.h"
 #include "hal_gpio.h"
+#include "main.h" // For hi2c2
+
+extern I2C_HandleTypeDef hi2c2;
 
 /**
  * @brief Initialize the Board Support Package
@@ -52,4 +55,13 @@ void BSP_LED_Off(void)
 void BSP_LED_Toggle(void)
 {
     hal_gpio_toggle_pin((hal_gpio_port_t)EXT_LED_GPIO_PORT, EXT_LED_PIN);
+}
+
+/**
+ * @brief Get I2C handle for temperature sensor
+ * @return I2C handle for temperature sensor peripheral
+ */
+hal_i2c_handle_t BSP_Get_TempSensor_I2C(void)
+{
+    return (hal_i2c_handle_t)&hi2c2;
 }
