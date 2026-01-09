@@ -4,7 +4,7 @@ Een productie-grade embedded firmware project dat industry best practices demons
 
 ## 🎯 Projectoverzicht
 
-Dit project implementeert een temperatuurmonitoringsysteem met displayuitvoer en LED-besturing, waarbij een **hoogst draagbare, modulaire en onderhoudbare embedded architectuur** wordt getoond.
+Dit project implementeert een temperatuurmonitoringsysteem met displayuitvoer en LED-besturing, waarbij een "layered event-driven architecture wordt getoond.
 
 ### Functies
 - Real-time temperatuur- en vochtigheidsmeting (ATH25 sensor via I2C)
@@ -17,7 +17,9 @@ Dit project implementeert een temperatuurmonitoringsysteem met displayuitvoer en
 
 ## 🏗️ Architectuur
 
-Het project volgt een **gelaagde architectuur** met strikte afhankelijkheden die alleen naar beneden vloeien, wat zorgt voor lage koppeling en hoge portabiliteit.
+Het project volgt architectuur met strikte afhankelijkheden die alleen naar beneden gelden, wat zorgt voor lage koppeling en hoge portabiliteit.
+
+![Architectuur Diagram](docs/images/SW-embedded%20layered-event-driven%20style.png)
 
 ### Laagbeschrijving
 
@@ -99,19 +101,18 @@ event_bus_subscribe(EVENT_TEMPERATURE_UPDATED, on_temperature_handler);
 - Services weten niets van elkaar
 - Gemakkelijk nieuwe subscribers toe te voegen (logging, netwerk, opslag)
 - Testbaar in isolatie
-- Industrie-standaard ontwerppatroon
 
 ### 4. **Geen Laagschendingen**
 
 Strikte naleving van **alleen neerwaartse afhankelijkheden**:
 
-✅ Application → Middleware  
-✅ Middleware → Event Bus / BSP  
-✅ BSP → HAL  
-✅ HAL → Hardware  
+Application → Middleware  
+Middleware → Event Bus / BSP  
+BSP → HAL  
+HAL → Hardware  
 
-❌ Geen opwaartse aanroepen  
-❌ Geen laag overslaan (behalve voor hulpfuncties zoals timing)
+Geen opwaartse aanroepen  
+Geen laag overslaan (behalve voor hulpfuncties zoals timing)
 
 ### 5. **Modulair & Testbaar**
 
@@ -187,7 +188,7 @@ stm32_development/
 
 ---
 
-## 🎓 Design Patterns Used
+## Design Patterns Used
 
 1. **Layered Architecture** - Clear separation of concerns
 2. **Publisher-Subscriber** - Event-driven communication
@@ -197,7 +198,7 @@ stm32_development/
 
 ---
 
-## 🔍 Code Quality Features
+## Code Quality Features
 
 - ✅ No global variables in application/middleware (encapsulated in services)
 - ✅ No magic numbers (all constants defined)
@@ -205,20 +206,6 @@ stm32_development/
 - ✅ Comprehensive comments and documentation
 - ✅ Type safety with abstraction types
 - ✅ Error handling at all layers
-
----
-
-## 📝 Future Enhancements
-
-- [ ] Integrate FreeRTOS for preemptive multitasking
-- [ ] Add data logging service
-- [ ] Gebruikte Ontwerppatronen
-
-1. **Gelaagde Architectuur** - Duidelijke scheiding van verantwoordelijkheden
-2. **Publisher-Subscriber** - Event-driven communicatie
-3. **Hardware Abstractie** - Platformonafhankelijkheid
-4. **Service-Georiënteerd** - Modulaire mogelijkheden
-5. **Dependency Inversion** - Bovenste lagen zijn afhankelijk van abstracties, niet van concrete implementaties
 
 ---
 
