@@ -1,6 +1,5 @@
 #include "serv_blinky.h"
-#include "main.h" // for externalLed_GPIO_Port and externalLed_Pin
-#include "hal_gpio.h"
+#include "bsp.h"
 #include "hal_delay.h"
 
 static uint32_t last_toggle = 0;
@@ -17,7 +16,7 @@ void blinky_run(void)
     uint32_t now = hal_get_tick();
     if ((now - last_toggle) >= interval_ms)
     {
-        hal_gpio_toggle_pin((hal_gpio_port_t)externalLed_GPIO_Port, externalLed_Pin);
+        BSP_LED_Toggle();
         last_toggle = now;
     }
 }

@@ -24,7 +24,7 @@ void temperature_sensor_run(void)
     // Implement the functionality to read temperature data and process it
     ath_data_t data;
     // read temperature sensor and humidity every second   
-    uint32_t now = HAL_GetTick();
+    uint32_t now = hal_get_tick();
     if ((now - last_read_time) >= read_interval_ms)
     {
         if(ath25_read(temp_sensor, &data) == HAL_I2C_OK) {
