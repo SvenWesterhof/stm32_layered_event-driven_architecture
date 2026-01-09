@@ -1,4 +1,4 @@
-#include "feat_temperature_sensor.h"
+#include "serv_temperature_sensor.h"
 #include "ips_display.h"
 
 #include "main.h" // for temperature_sensor_on_off_GPIO_Port and temperature_sensor_on_off_Pin
