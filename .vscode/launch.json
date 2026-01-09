@@ -4,12 +4,12 @@
         {
             "name": "Cortex Debug",
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceFolder}/build/Debug/stm32_blinking_led.elf",
+            "executable": "${workspaceFolder}/build/Debug/stm32_development.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "stlink",
             "device": "STM32F767ZI",
-            "interface": "swd",
+            "interface": "swd"
         }
     ]
 }
