@@ -4,6 +4,7 @@
 
 // Event Queue
 #define EVENT_QUEUE_SIZE 16
+#define MAX_EVENT_DATA_SIZE 64  // Maximum size for event data
 
 typedef struct {
     event_callback_t callbacks[MAX_SUBSCRIBERS_PER_EVENT];
@@ -15,6 +16,7 @@ static event_subscriber_list_t subscriber_table[EVENT_USER_DEFINED_START];
 
 // Event queue for asynchronous processing
 static event_t event_queue[EVENT_QUEUE_SIZE];
+static uint8_t event_data_buffer[EVENT_QUEUE_SIZE][MAX_EVENT_DATA_SIZE];  // Buffer to store event data copies
 static uint8_t queue_head = 0;
 static uint8_t queue_tail = 0;
 static uint8_t queue_count = 0;
@@ -106,12 +108,23 @@ bool event_bus_publish(event_type_t event_type, void* data, uint32_t data_size)
         return false; // Queue full
     }
     
+    if (data_size > MAX_EVENT_DATA_SIZE) {
+        return false; // Data too large
+    }
+    
     // Add event to queue
     event_t* event = &event_queue[queue_tail];
     event->type = event_type;
-    event->data = data;
     event->data_size = data_size;
     event->timestamp = event_bus_get_tick();
+    
+    // Copy event data into buffer to prevent stack corruption
+    if (data != NULL && data_size > 0) {
+        memcpy(event_data_buffer[queue_tail], data, data_size);
+        event->data = event_data_buffer[queue_tail];
+    } else {
+        event->data = NULL;
+    }
     
     queue_tail = (queue_tail + 1) % EVENT_QUEUE_SIZE;
     queue_count++;
