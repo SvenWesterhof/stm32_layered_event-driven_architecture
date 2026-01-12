@@ -27,6 +27,9 @@ ips_display_status_t ips_display_open() {
     ST7735_WriteString(10, 10, "Temp: ", Font_11x18, ST7735_WHITE, ST7735_BLACK);
     ST7735_WriteString(10, 40, "Hum:  ", Font_11x18, ST7735_WHITE, ST7735_BLACK);
     
+    // Enable backlight
+    HAL_GPIO_WritePin(DISPLAY_BACKLIGHT_PORT, DISPLAY_BACKLIGHT_PIN, GPIO_PIN_SET);
+    
     display_initialized = true;
     return IPS_DISPLAY_OK;
 }
@@ -35,6 +38,9 @@ ips_display_status_t ips_display_close() {
     if (!display_initialized) {
         return IPS_DISPLAY_ERROR;
     }
+    
+    // Disable backlight
+    HAL_GPIO_WritePin(DISPLAY_BACKLIGHT_PORT, DISPLAY_BACKLIGHT_PIN, GPIO_PIN_RESET);
     
     // Put display in sleep mode and turn off
     ST7735_Sleep();
