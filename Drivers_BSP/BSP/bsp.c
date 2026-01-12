@@ -3,6 +3,7 @@
 #include "main.h" // For hi2c2
 
 extern I2C_HandleTypeDef hi2c2;
+extern I2C_HandleTypeDef hi2c4;
 
 /**
  * @brief Initialize the Board Support Package
@@ -64,4 +65,13 @@ void BSP_LED_Toggle(void)
 hal_i2c_handle_t BSP_Get_TempSensor_I2C(void)
 {
     return (hal_i2c_handle_t)&hi2c2;
+}
+
+/**
+ * @brief Get I2C handle for INA226 power monitor
+ * @return I2C handle for INA226 peripheral
+ */
+hal_i2c_handle_t BSP_Get_INA226_I2C(void)
+{
+    return (hal_i2c_handle_t)&hi2c4;
 }

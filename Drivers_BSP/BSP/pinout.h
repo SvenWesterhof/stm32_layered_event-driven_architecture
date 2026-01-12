@@ -26,12 +26,9 @@
 #define TEMP_SENSOR_ON_OFF_PIN GPIO_PIN_14 //D1 on board
 #define TEMP_SENSOR_ON_OFF_PORT GPIOG 
 
-#define TEMP_SENSOR_SCL_PIN GPIO_PIN_1 //D69 on board
-#define TEMP_SENSOR_SCL_PORT GPIOF
+// INA226 Power Monitor conversion ready pin
+#define INA226_ALERT_PIN    GPIO_PIN_10 
+#define INA226_ALERT_PORT   GPIOB
 
-#define TEMP_SENSOR_SDA_PIN GPIO_PIN_0 //D68 on board
-#define TEMP_SENSOR_SDA_PORT GPIOF
-
-//
 
 #endif // PINOUT_H

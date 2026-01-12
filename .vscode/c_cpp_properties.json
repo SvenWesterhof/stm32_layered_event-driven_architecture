@@ -4,15 +4,22 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Core/Src",
                 "${workspaceFolder}/Drivers/CMSIS/Include",
                 "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F7xx/Include",
                 "${workspaceFolder}/Drivers/STM32F7xx_HAL_Driver/Inc",
-                "${workspaceFolder}/App",
-                "${workspaceFolder}/App/**",
-                "${workspaceFolder}/Drivers_custom",
-                "${workspaceFolder}/Drivers_custom/**",
+                "${workspaceFolder}/HAL",
+                "${workspaceFolder}/Drivers_BSP/BSP",
+                "${workspaceFolder}/Drivers_BSP/Custom",
+                "${workspaceFolder}/Drivers_BSP/External",
+                "${workspaceFolder}/Drivers_BSP/External/ST7735",
                 "${workspaceFolder}/Hardware",
-                "${workspaceFolder}/Hardware/**"
+                "${workspaceFolder}/Application",
+                "${workspaceFolder}/Middleware",
+                "${workspaceFolder}/Middleware/Services",
+                "${workspaceFolder}/Middleware/Control",
+                "${workspaceFolder}/Middleware/Features",
+                "${workspaceFolder}/OS"
             ],
             "defines": [
                 "STM32F767xx",
