@@ -32,6 +32,16 @@
 #define TEMP_SENSOR_SDA_PIN GPIO_PIN_0 //D68 on board
 #define TEMP_SENSOR_SDA_PORT GPIOF
 
+// INA226 Current/Power Monitor Pins
+#define INA226_SCL_PIN      GPIO_PIN_8  // Placeholder
+#define INA226_SCL_PORT     GPIOB
+
+#define INA226_SDA_PIN      GPIO_PIN_9  // Placeholder 
+#define INA226_SDA_PORT     GPIOB
+
+#define INA226_ALERT_PIN    GPIO_PIN_10 // Placeholder
+#define INA226_ALERT_PORT   GPIOB
+
 //
 
 #endif // PINOUT_H
