@@ -73,8 +73,14 @@ typedef struct {
     float power_mW;
 } INA226_Data;
 
+// Forward declaration
+typedef struct ina226_sensor ina226_sensor_t;
+
+// Data ready callback function type
+typedef void (*ina226_data_callback_t)(ina226_sensor_t* sensor, INA226_Data* data);
+
 // INA226 sensor configuration
-typedef struct {
+typedef struct ina226_sensor {
     bool initialized;
     bool active;
     hal_i2c_handle_t hi2c;
@@ -84,6 +90,8 @@ typedef struct {
     float shunt_resistor_ohms;  // Shunt resistor value in ohms
     float current_lsb;          // Current LSB in A
     uint16_t calibration_value; // Calibration register value
+    volatile bool alert_flag;   // Set by ISR, cleared by application
+    ina226_data_callback_t data_callback; // Direct callback for high-frequency data
 } ina226_sensor_t;
 
 extern ina226_sensor_t default_ina226_sensor;
@@ -105,9 +113,11 @@ void ina226_init(void);
  * @param sensor Pointer to INA226 sensor structure
  * @param hi2c I2C handle
  * @param shunt_resistor_ohms Shunt resistor value in ohms (e.g., 0.1 for 100mΩ)
+ * @param data_callback Callback for data-ready events (called from process_alert)
  * @return hal_i2c_status_t Status of operation
  */
-hal_i2c_status_t ina226_open(ina226_sensor_t *sensor, hal_i2c_handle_t hi2c, float shunt_resistor_ohms);
+hal_i2c_status_t ina226_open(ina226_sensor_t *sensor, hal_i2c_handle_t hi2c, 
+                              float shunt_resistor_ohms, ina226_data_callback_t data_callback);
 
 /**
  * @brief Read current measurements from sensor
@@ -137,5 +147,23 @@ hal_i2c_status_t ina226_close(ina226_sensor_t *sensor);
  * @param sensor Pointer to INA226 sensor structure
  */
 void ina226_deinit(ina226_sensor_t *sensor);
+
+/**
+ * @brief ALERT pin interrupt callback
+ * Should be called from GPIO EXTI interrupt handler.
+ * Sets alert flag for processing in main context.
+ * 
+ * @param sensor Pointer to INA226 sensor structure
+ */
+void ina226_alert_callback(ina226_sensor_t *sensor);
+
+/**
+ * @brief Process pending ALERT and call data callback
+ * Should be called periodically (e.g., from timer interrupt or high-priority task).
+ * Reads sensor data and calls data_callback if configured.
+ * 
+ * @param sensor Pointer to INA226 sensor structure
+ */
+void ina226_process_alert(ina226_sensor_t *sensor);
 
 #endif // INA226_H
