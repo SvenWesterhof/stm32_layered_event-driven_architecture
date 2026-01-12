@@ -84,7 +84,8 @@ static hal_i2c_status_t ina226_read_data(ina226_sensor_t *sensor, INA226_Data *d
 }
 
 hal_i2c_status_t ina226_open(ina226_sensor_t *sensor, hal_i2c_handle_t hi2c, 
-                              float shunt_resistor_ohms, ina226_data_callback_t data_callback) {
+                              float shunt_resistor_ohms, ina226_data_callback_t data_callback,
+                              const ina226_config_t *config) {
     uint16_t device_id;
     hal_i2c_status_t status;
     
@@ -118,7 +119,6 @@ hal_i2c_status_t ina226_open(ina226_sensor_t *sensor, hal_i2c_handle_t hi2c,
     // Calculate calibration value
     // Current_LSB = Maximum Expected Current / 32768
     // For example: If max current is 3.2A, Current_LSB = 3.2 / 32768 = 0.0001 A = 0.1 mA
-    // We'll use a typical value that works for most applications
     float max_expected_current = 3.2f; // 3.2A max
     sensor->current_lsb = max_expected_current / 32768.0f;
     
@@ -131,23 +131,48 @@ hal_i2c_status_t ina226_open(ina226_sensor_t *sensor, hal_i2c_handle_t hi2c,
         return status;
     }
     
-    // Configure sensor:
-    // - Averaging: 16 samples
-    // - Bus voltage conversion time: 1.1ms
-    // - Shunt voltage conversion time: 1.1ms
-    // - Mode: Continuous shunt and bus voltage
-    uint16_t config = INA226_CONFIG_AVG_16 |
+    // Configure sensor with provided config or use defaults
+    uint16_t config_value;
+    if (config != NULL) {
+        // Use provided configuration
+        config_value = config->averaging | 
+                      config->bus_conv_time | 
+                      config->shunt_conv_time | 
+                      config->mode;
+    } else {
+        // Use default configuration:
+        // - Averaging: 16 samples
+        // - Bus voltage conversion time: 1.1ms
+        // - Shunt voltage conversion time: 1.1ms
+        // - Mode: Continuous shunt and bus voltage
+        config_value = INA226_CONFIG_AVG_16 |
                       INA226_CONFIG_VBUSCT_1100US |
                       INA226_CONFIG_VSHCT_1100US |
                       INA226_CONFIG_MODE_SHUNT_BUS_CONT;
+    }
     
-    status = ina226_write_register(sensor, INA226_REG_CONFIG, config);
+    status = ina226_write_register(sensor, INA226_REG_CONFIG, config_value);
     if (status != HAL_I2C_OK) {
         return status;
     }
     
     sensor->active = true;
     return HAL_I2C_OK;
+}
+
+hal_i2c_status_t ina226_configure(ina226_sensor_t *sensor, const ina226_config_t *config) {
+    if (!sensor->active) {
+        return HAL_I2C_ERROR;
+    }
+    
+    // Build configuration register value
+    uint16_t config_value = config->averaging | 
+                           config->bus_conv_time | 
+                           config->shunt_conv_time | 
+                           config->mode;
+    
+    // Write configuration to sensor
+    return ina226_write_register(sensor, INA226_REG_CONFIG, config_value);
 }
 
 hal_i2c_status_t ina226_read(ina226_sensor_t *sensor, INA226_Data *data) {

@@ -67,6 +67,14 @@
 // Default I2C timeout
 #define INA226_I2C_TIMEOUT_MS       100
 
+// Measurement configuration structure
+typedef struct {
+    uint16_t averaging;         // Use INA226_CONFIG_AVG_* defines
+    uint16_t bus_conv_time;     // Use INA226_CONFIG_VBUSCT_* defines
+    uint16_t shunt_conv_time;   // Use INA226_CONFIG_VSHCT_* defines
+    uint16_t mode;              // Use INA226_CONFIG_MODE_* defines
+} ina226_config_t;
+
 // Data structure for measurements
 typedef struct {
     float current_mA;
@@ -115,10 +123,23 @@ void ina226_init(void);
  * @param hi2c I2C handle
  * @param shunt_resistor_ohms Shunt resistor value in ohms (e.g., 0.1 for 100mΩ)
  * @param data_callback Callback for data-ready events (called from process_alert)
+ * @param config Optional configuration (NULL for default: 16x avg, 1.1ms conversion)
  * @return hal_i2c_status_t Status of operation
  */
 hal_i2c_status_t ina226_open(ina226_sensor_t *sensor, hal_i2c_handle_t hi2c, 
-                              float shunt_resistor_ohms, ina226_data_callback_t data_callback);
+                              float shunt_resistor_ohms, ina226_data_callback_t data_callback,
+                              const ina226_config_t *config);
+
+/**
+ * @brief Configure measurement parameters
+ * Changes conversion times, averaging, and measurement mode.
+ * Can be called while sensor is active to change settings on-the-fly.
+ * 
+ * @param sensor Pointer to INA226 sensor structure
+ * @param config Pointer to configuration structure with measurement parameters
+ * @return hal_i2c_status_t Status of operation
+ */
+hal_i2c_status_t ina226_configure(ina226_sensor_t *sensor, const ina226_config_t *config);
 
 /**
  * @brief Read current measurements from sensor
