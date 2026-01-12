@@ -29,6 +29,10 @@ static uint32_t session_start_sec = 0;
 static uint16_t session_start_ms = 0;
 static uint32_t session_start_tick = 0;
 
+// Sample rate throttling
+static uint32_t last_sample_tick = 0;
+static uint32_t sample_period_ms = 0;
+
 // Forward declarations
 static void current_data_ready_callback(ina226_sensor_t* sensor, INA226_Data* data);
 static void get_ina226_config_for_period(sample_period_ms_t period, ina226_config_t *config);
@@ -114,6 +118,10 @@ bool current_monitor_start_measurement(const measurement_config_t *config) {
         session_start_ms = start_time.milliseconds;
     }
     session_start_tick = hal_get_tick();
+    
+    // Initialize sample rate throttling
+    sample_period_ms = config->sample_period;
+    last_sample_tick = hal_get_tick();
     
     // Start measurement timing
     measurement_start_tick = hal_get_tick();
@@ -221,6 +229,13 @@ static void current_data_ready_callback(ina226_sensor_t* sensor, INA226_Data* da
         return;
     }
     
+    // Throttle to desired sample rate
+    uint32_t now = hal_get_tick();
+    if ((now - last_sample_tick) < sample_period_ms) {
+        return;  // Too soon, skip this sample
+    }
+    last_sample_tick = now;
+    
     if (sample_count >= CURRENT_MONITOR_BUFFER_SIZE || sample_count >= active_config.max_samples) {
         stats.buffer_full = true;
         stats.buffer_overruns++;
@@ -284,17 +299,19 @@ static void check_measurement_completion(void) {
 static void get_ina226_config_for_period(sample_period_ms_t period, ina226_config_t *config) {
     switch (period) {
         case SAMPLE_PERIOD_1MS:
-            // 1ms period → 1000 Hz
-            // Conversion time: (140µs + 140µs) * 1 = 280µs → ~3571 Hz max, use 1000 Hz
+            // 1ms period → 1000 Hz target
+            // Conversion time: (332µs + 332µs) * 1 = 664µs → ~1506 Hz
+            // Runs at ~1.5x target rate, throttle to 1000 Hz in software
             config->averaging = INA226_CONFIG_AVG_1;
-            config->bus_conv_time = INA226_CONFIG_VBUSCT_140US;
-            config->shunt_conv_time = INA226_CONFIG_VSHCT_140US;
+            config->bus_conv_time = INA226_CONFIG_VBUSCT_332US;
+            config->shunt_conv_time = INA226_CONFIG_VSHCT_332US;
             config->mode = INA226_CONFIG_MODE_SHUNT_BUS_CONT;
             break;
             
         case SAMPLE_PERIOD_10MS:
-            // 10ms period → 100 Hz
-            // Conversion time: (588µs + 588µs) * 4 = 4.7ms → ~212 Hz max, use 100 Hz
+            // 10ms period → 100 Hz target
+            // Conversion time: (588µs + 588µs) * 4 = 4.7ms → ~212 Hz
+            // Runs at ~2.1x target rate with 4x averaging, throttle to 100 Hz
             config->averaging = INA226_CONFIG_AVG_4;
             config->bus_conv_time = INA226_CONFIG_VBUSCT_588US;
             config->shunt_conv_time = INA226_CONFIG_VSHCT_588US;
@@ -302,8 +319,9 @@ static void get_ina226_config_for_period(sample_period_ms_t period, ina226_confi
             break;
             
         case SAMPLE_PERIOD_100MS:
-            // 100ms period → 10 Hz
-            // Conversion time: (1100µs + 1100µs) * 16 = 35.2ms → ~28 Hz max, use 10 Hz
+            // 100ms period → 10 Hz target
+            // Conversion time: (1100µs + 1100µs) * 16 = 35.2ms → ~28 Hz
+            // Runs at ~2.8x target rate with 16x averaging, throttle to 10 Hz
             config->averaging = INA226_CONFIG_AVG_16;
             config->bus_conv_time = INA226_CONFIG_VBUSCT_1100US;
             config->shunt_conv_time = INA226_CONFIG_VSHCT_1100US;
@@ -311,9 +329,9 @@ static void get_ina226_config_for_period(sample_period_ms_t period, ina226_confi
             break;
             
         case SAMPLE_PERIOD_1000MS:
-            // 1000ms period → 1 Hz
-            // Conversion time: (8244µs + 8244µs) * 128 = ~2.1s → ~0.47 Hz max, need faster
-            // Use: (4156µs + 4156µs) * 64 = ~532ms → ~1.88 Hz max, use 1 Hz
+            // 1000ms period → 1 Hz target
+            // Conversion time: (4156µs + 4156µs) * 64 = 532ms → ~1.88 Hz
+            // Runs at ~1.9x target rate with 64x averaging, throttle to 1 Hz
             config->averaging = INA226_CONFIG_AVG_64;
             config->bus_conv_time = INA226_CONFIG_VBUSCT_4156US;
             config->shunt_conv_time = INA226_CONFIG_VSHCT_4156US;
@@ -321,7 +339,7 @@ static void get_ina226_config_for_period(sample_period_ms_t period, ina226_confi
             break;
             
         default:
-            // Default to 100ms
+            // Default to 100ms settings
             config->averaging = INA226_CONFIG_AVG_16;
             config->bus_conv_time = INA226_CONFIG_VBUSCT_1100US;
             config->shunt_conv_time = INA226_CONFIG_VSHCT_1100US;
