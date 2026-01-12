@@ -100,6 +100,13 @@ bool current_monitor_is_complete(void);
 void current_monitor_set_state(uint8_t state);
 
 /**
+ * @brief Process pending samples (should be called from main loop)
+ * Triggers INA226 to check for new data and checks measurement completion
+ * Should be called frequently (e.g., every 1ms from main loop or timer)
+ */
+void current_monitor_process(void);
+
+/**
  * @brief Read all captured samples from completed measurement
  * Only works when measurement status is COMPLETE
  * 
