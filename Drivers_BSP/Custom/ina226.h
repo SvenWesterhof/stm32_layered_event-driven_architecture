@@ -3,6 +3,7 @@
 
 #include "hal_i2c.h"
 #include "hal_gpio.h"
+#include "hal_delay.h"
 #include "pinout.h"
 #include <stdbool.h>
 #include <stdint.h>
