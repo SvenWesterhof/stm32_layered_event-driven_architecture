@@ -247,6 +247,8 @@ extern "C" {
 void ST7735_Unselect();
 
 void ST7735_Init(void);
+void ST7735_Sleep(void);
+void ST7735_Wakeup(void);
 void ST7735_DrawPixel(uint16_t x, uint16_t y, uint16_t color);
 void ST7735_WriteString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor);
 void ST7735_FillRectangle(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
