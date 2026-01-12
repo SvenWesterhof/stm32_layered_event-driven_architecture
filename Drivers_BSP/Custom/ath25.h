@@ -36,7 +36,10 @@ hal_i2c_status_t ath25_open(ath25_sensor_t *sensor, hal_i2c_handle_t hi2c);
 // Read the current temperature value from the sensor
 hal_i2c_status_t ath25_read(ath25_sensor_t *sensor, ath_data_t *data);
 
-// Close the connection and disable the temperature sensor
+// Close the connection and power down the temperature sensor
 hal_i2c_status_t ath25_close(ath25_sensor_t *sensor);
+
+// Deinitialize and fully power down the sensor
+void ath25_deinit(ath25_sensor_t *sensor);
 
 #endif // ATH25_H

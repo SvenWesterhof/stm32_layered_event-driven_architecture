@@ -97,12 +97,23 @@ hal_i2c_status_t ath25_read(ath25_sensor_t *sensor, ath_data_t *data) {
 }
 
 hal_i2c_status_t ath25_close(ath25_sensor_t *sensor) {
-    // Close connection to the temperature sensor
     if (sensor->initialized == false) {
         return HAL_I2C_ERROR;
     }
+    
     // Power off the sensor
     hal_gpio_write_pin(sensor->power_port, sensor->power_pin, HAL_GPIO_PIN_RESET);
     sensor->initialized = false;
+    
     return HAL_I2C_OK;
+}
+
+void ath25_deinit(ath25_sensor_t *sensor) {
+    // Fully deinitialize the sensor
+    if (sensor->initialized) {
+        ath25_close(sensor);
+    }
+    
+    // Clear the I2C handle reference
+    sensor->hi2c = NULL;
 }

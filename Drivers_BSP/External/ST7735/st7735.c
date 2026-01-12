@@ -162,6 +162,20 @@ void ST7735_Init() {
     ST7735_Unselect();
 }
 
+void ST7735_Sleep() {
+    ST7735_Select();
+    ST7735_WriteCommand(ST7735_DISPOFF);
+    ST7735_WriteCommand(ST7735_SLPIN);
+    ST7735_Unselect();
+}
+
+void ST7735_Wakeup() {
+    ST7735_Select();
+    ST7735_WriteCommand(ST7735_SLPOUT);
+    ST7735_WriteCommand(ST7735_DISPON);
+    ST7735_Unselect();
+}
+
 void ST7735_DrawPixel(uint16_t x, uint16_t y, uint16_t color) {
     if((x >= ST7735_WIDTH) || (y >= ST7735_HEIGHT))
         return;

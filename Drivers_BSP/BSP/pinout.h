@@ -19,6 +19,9 @@
 #define DISPLAY_CS_PIN      GPIO_PIN_7
 #define DISPLAY_CS_PORT     GPIOB
 
+#define DISPLAY_BACKLIGHT_PIN   GPIO_PIN_14
+#define DISPLAY_BACKLIGHT_PORT  GPIOD
+
 // Temperature Sensor Pins
 #define TEMP_SENSOR_ON_OFF_PIN GPIO_PIN_14 //D1 on board
 #define TEMP_SENSOR_ON_OFF_PORT GPIOG 
