@@ -68,10 +68,10 @@ hal_i2c_handle_t BSP_Get_TempSensor_I2C(void)
 }
 
 /**
- * @brief Get I2C handle for INA226 power monitor
+ * @brief Get I2C handle for current sensor (INA226)
  * @return I2C handle for INA226 peripheral
  */
-hal_i2c_handle_t BSP_Get_INA226_I2C(void)
+hal_i2c_handle_t BSP_Get_CurrentSensor_I2C(void)
 {
     return (hal_i2c_handle_t)&hi2c4;
 }

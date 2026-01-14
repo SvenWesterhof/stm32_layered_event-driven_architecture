@@ -28,3 +28,7 @@ compile_commands.json
 *.hex
 *.map
 *.list
+
+# Documentation (auto-generated or implementation details)
+docs/README_STM32_IMPLEMENTATION.md
+docs/STM32_PORTABILITY.md

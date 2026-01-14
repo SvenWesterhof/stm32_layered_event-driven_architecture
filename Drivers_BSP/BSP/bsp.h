@@ -27,5 +27,6 @@ void BSP_LED_Toggle(void);
 
 // Peripheral access functions
 hal_i2c_handle_t BSP_Get_TempSensor_I2C(void);
+hal_i2c_handle_t BSP_Get_CurrentSensor_I2C(void);
 
 #endif // BSP_H
