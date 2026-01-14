@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Cortex Debug",
+            "name": "Cortex Debug (ST-Link)",
             "cwd": "${workspaceFolder}",
             "executable": "${workspaceFolder}/build/Debug/stm32_development.elf",
             "request": "launch",
@@ -10,6 +10,36 @@
             "servertype": "stlink",
             "device": "STM32F767ZI",
             "interface": "swd"
+        },
+        {
+            "name": "Cortex Debug (OpenOCD + SWO)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/stm32_development.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "STM32F767ZI",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f7x.cfg"
+            ],
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 16000000,
+                "swoFrequency": 2000000,
+                "source": "probe",
+                "decoders": [
+                    {
+                        "type": "console",
+                        "label": "ITM Console",
+                        "port": 0
+                    }
+                ]
+            },
+            "postRestartCommands": [
+                "monitor tpiu config internal - uart off 16000000 2000000",
+                "monitor itm port 0 on"
+            ]
         }
     ]
 }
