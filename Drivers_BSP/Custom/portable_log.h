@@ -10,6 +10,8 @@
 #ifndef PORTABLE_LOG_H
 #define PORTABLE_LOG_H
 
+#define STM32F7
+
 // ============================================================================
 // Platform Detection
 // ============================================================================
@@ -22,6 +24,7 @@
       defined(STM32L4) || defined(STM32L5) || defined(STM32G0) || \
       defined(STM32G4) || defined(STM32WB) || defined(STM32MP1)
     #define PLATFORM_STM32
+    #include "stm32f7xx_hal.h"
 #else
     #warning "Unknown platform - defaulting to generic logging"
     #define PLATFORM_GENERIC
@@ -46,6 +49,7 @@
 
 #elif defined(PLATFORM_STM32)
     #include <stdio.h>
+    #include "core_cm7.h"  // For ITM peripheral access
     
     // Choose STM32 logging backend:
     // 1. PRINTF - Standard printf (requires retarget or semihosting)
@@ -55,12 +59,14 @@
     #if defined(USE_SEGGER_RTT)
         #include "SEGGER_RTT.h"
         #define LOG_OUTPUT(str) SEGGER_RTT_WriteString(0, str)
-    #elif defined(USE_ITM)
-        extern void ITM_SendString(const char *str);
-        #define LOG_OUTPUT(str) ITM_SendString(str)
     #else
-        // Default: printf (make sure you have retargeted printf to UART/USB)
-        #define LOG_OUTPUT(str) printf("%s", str)
+        // Default: Use ITM/SWO for STM32 (use CMSIS ITM_SendChar)
+        static inline void LOG_ITM_SendString(const char *str) {
+            while (*str) {
+                ITM_SendChar((uint32_t)(*str++));
+            }
+        }
+        #define LOG_OUTPUT(str) LOG_ITM_SendString(str)
     #endif
     
     // Log level colors (ANSI - works with most terminals)
