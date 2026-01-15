@@ -596,7 +596,8 @@ hal_uart_config_t hal_uart_get_default_config(void)
 }
 
 /**
- * @brief UART error callback - can be called from STM32 HAL
+ * @brief UART error callback - called from STM32 HAL (ISR context)
+ * @note This is called from ISR context, must use FromISR variants
  */
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 {
@@ -617,24 +618,24 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 
     if (error & HAL_UART_ERROR_PE) {
         event.type = HAL_UART_EVENT_PARITY_ERROR;
-        LOG_W(TAG, "UART%d parity error", port);
     } else if (error & HAL_UART_ERROR_FE) {
         event.type = HAL_UART_EVENT_FRAME_ERROR;
-        LOG_W(TAG, "UART%d frame error", port);
     } else if (error & HAL_UART_ERROR_ORE) {
         event.type = HAL_UART_EVENT_RX_OVERFLOW;
-        LOG_W(TAG, "UART%d overrun error", port);
     } else {
         return; // Ignore other errors
     }
 
     if (uart_state[port].event_queue) {
-        os_queue_send(uart_state[port].event_queue, &event, OS_NO_WAIT);
+        bool higher_priority_task_woken = false;
+        os_queue_send_from_isr(uart_state[port].event_queue, &event, &higher_priority_task_woken);
+        os_yield_from_isr(higher_priority_task_woken);
     }
 }
 
 /**
  * @brief UART TX complete callback - called from STM32 HAL when DMA TX completes
+ * @note This is called from ISR context, must use FromISR variants
  */
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
@@ -660,7 +661,9 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
             .size = 0
         };
         if (uart_state[port].event_queue) {
-            os_queue_send(uart_state[port].event_queue, &event, OS_NO_WAIT);
+            bool higher_priority_task_woken = false;
+            os_queue_send_from_isr(uart_state[port].event_queue, &event, &higher_priority_task_woken);
+            os_yield_from_isr(higher_priority_task_woken);
         }
     }
 }
