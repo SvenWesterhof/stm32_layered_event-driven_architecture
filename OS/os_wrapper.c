@@ -451,6 +451,16 @@ os_result_t os_semaphore_take_from_isr(os_semaphore_handle_t semaphore, bool* hi
     
     return (result == pdPASS) ? OS_SUCCESS : OS_TIMEOUT;
 }
+
+// =============================================================================
+// ISR UTILITIES
+// =============================================================================
+
+void os_yield_from_isr(bool higher_priority_task_woken)
+{
+    portYIELD_FROM_ISR(higher_priority_task_woken ? pdTRUE : pdFALSE);
+}
+
 // =============================================================================
 // TIME OPERATIONS
 // =============================================================================
