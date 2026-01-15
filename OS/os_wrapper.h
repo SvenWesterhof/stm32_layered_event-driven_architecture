@@ -294,11 +294,25 @@ os_result_t os_semaphore_give_from_isr(os_semaphore_handle_t semaphore, bool* hi
  * @param semaphore Semaphore handle
  * @param higher_priority_task_woken Set to true if a higher priority task was woken
  * @return OS_SUCCESS, OS_TIMEOUT, or OS_INVALID_PARAM
- * 
+ *
  * @note NON-BLOCKING: This function never blocks and should only be called from ISR context.
  *       No timeout parameter - always returns immediately.
  */
 os_result_t os_semaphore_take_from_isr(os_semaphore_handle_t semaphore, bool* higher_priority_task_woken);
+
+// =============================================================================
+// ISR UTILITIES
+// =============================================================================
+
+/**
+ * @brief Yield to higher priority task from ISR context
+ * @param higher_priority_task_woken true if a higher priority task was woken by an ISR operation
+ *
+ * @note Call this at the end of an ISR if any FromISR function indicated a higher priority
+ *       task was woken. This triggers an immediate context switch to that task.
+ *       Only call from ISR context.
+ */
+void os_yield_from_isr(bool higher_priority_task_woken);
 
 // =============================================================================
 // TIME OPERATIONS

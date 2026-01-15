@@ -31,6 +31,7 @@ Het project volgt architectuur met strikte afhankelijkheden die alleen naar bene
 **Middleware Layer (Middlewarelaag)**
 - **Services**: Bieden specifieke mogelijkheden (sensor uitlezen, displaybeheer, LED-besturing)
 - **Control**: Bedrijfslogica en besluitvorming (momenteel voorbereid voor toekomstig gebruik)
+- **Features**: Specifieke functionaliteit en features (momenteel voorbereid voor toekomstig gebruik)
 
 **Event Bus (OS Layer)**
 - Publisher-subscriber patroon voor communicatie
@@ -43,7 +44,7 @@ Het project volgt architectuur met strikte afhankelijkheden die alleen naar bene
 
 **Hardware Abstraction Layer (HAL)**
 - Platform-onafhankelijke interface
-- GPIO, I2C, SPI, Delay abstracties
+- GPIO, I2C, SPI, RTC, Delay abstracties
 - Wikkelt vendor HAL (STM32 HAL)
 
 **Hardware**
@@ -148,8 +149,9 @@ stm32_development/
 │   │   ├── serv_temperature_sensor.*  # Temperature sensor service
 │   │   ├── serv_display.*   # Display service
 │   │   └── service_events.h # Event data structures
-│   └── Control/             # Control/business logic (prepared)
-│       └── control.h
+│   ├── Control/             # Control/business logic (prepared)
+│   │   └── control.h
+│   └── Features/            # Features (prepared for future use)
 │
 ├── OS/                      # Event bus & OS utilities
 │   ├── event_bus.*          # Publish-subscribe event system
@@ -161,6 +163,7 @@ stm32_development/
 │   │   └── pinout.h        # Pin definitions
 │   ├── Custom/             # Custom device drivers
 │   │   ├── ath25.*         # Temperature sensor driver
+│   │   ├── ina226.*        # Current/power sensor driver
 │   │   └── ips_display.*   # Display driver
 │   └── External/           # Third-party drivers
 │       └── ST7735/         # Display controller driver
@@ -169,6 +172,7 @@ stm32_development/
 │   ├── hal_gpio.*          # GPIO abstraction
 │   ├── hal_i2c.*           # I2C abstraction
 │   ├── hal_spi.*           # SPI abstraction
+│   ├── hal_rtc.*           # RTC abstraction
 │   └── hal_delay.*         # Timing abstraction
 │
 ├── Core/                   # STM32 CubeMX generated code
