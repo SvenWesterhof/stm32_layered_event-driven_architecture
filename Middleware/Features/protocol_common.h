@@ -62,6 +62,9 @@ typedef enum {
     CMD_CLEAR_BUFFER       = 0x06,   /**< Clear data buffer */
     CMD_GET_CONFIG         = 0x07,   /**< Get configuration */
     CMD_SET_CONFIG         = 0x08,   /**< Set configuration */
+
+    // Notification IDs (0x80+)
+    NOTIFY_SENSOR_DATA     = 0x80,   /**< Live sensor data notification */
 } command_id_t;
 
 // ============================================================================

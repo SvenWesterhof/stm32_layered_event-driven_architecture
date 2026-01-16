@@ -441,6 +441,14 @@ bool hal_uart_write_async(hal_uart_port_t port, const uint8_t *data, size_t len)
     return true;
 }
 
+bool hal_uart_tx_busy(hal_uart_port_t port)
+{
+    if (port >= HAL_UART_PORT_MAX || !uart_state[port].initialized) {
+        return false;
+    }
+    return uart_state[port].tx_in_progress;
+}
+
 int hal_uart_read(hal_uart_port_t port, uint8_t *data, size_t len, int timeout_ms)
 {
     if (port >= HAL_UART_PORT_MAX || !uart_state[port].initialized) {

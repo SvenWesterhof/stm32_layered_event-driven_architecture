@@ -20,7 +20,7 @@ static const char *TAG = "PROTO";
 // Configuration
 // ============================================================================
 
-#define STREAM_TASK_STACK_SIZE  2048
+#define STREAM_TASK_STACK_SIZE  4096
 #define STREAM_TASK_PRIORITY    8
 
 // ============================================================================
@@ -204,7 +204,7 @@ proto_handler_status_t protocol_handler_send_sensor_sample(
     }
 
     return protocol_handler_send_notification(
-        CMD_START_MEASUREMENT,
+        NOTIFY_SENSOR_DATA,
         sample,
         sizeof(sensor_sample_t));
 }
