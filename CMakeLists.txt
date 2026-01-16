@@ -42,6 +42,7 @@ add_subdirectory(Middleware)
 add_subdirectory(HAL)
 add_subdirectory(Drivers_BSP)
 add_subdirectory(OS)
+add_subdirectory(Utils)
 
 
 # Link directories setup
