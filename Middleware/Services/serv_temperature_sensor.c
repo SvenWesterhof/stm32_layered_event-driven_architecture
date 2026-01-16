@@ -5,6 +5,7 @@
 #include "bsp.h"
 #include "sensor_ring_buffer.h"
 #include "os_wrapper.h"
+#include "hal_rtc.h"
 
 // ============================================================================
 // Private Data
@@ -32,7 +33,10 @@ static uint32_t get_timestamp(void)
     if (timestamp_fn != NULL) {
         return timestamp_fn();
     }
-    // Default: use milliseconds since boot
+    // Use RTC timestamp if valid, otherwise fall back to OS time
+    if (hal_rtc_is_time_valid()) {
+        return hal_rtc_get_timestamp();
+    }
     return os_get_time_ms();
 }
 
