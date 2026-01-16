@@ -204,7 +204,7 @@ proto_handler_status_t protocol_handler_send_sensor_sample(
     }
 
     return protocol_handler_send_notification(
-        CMD_START_MEASUREMENT,
+        NOTIFY_SENSOR_DATA,
         sample,
         sizeof(sensor_sample_t));
 }
