@@ -20,7 +20,7 @@ static const char *TAG = "PROTO";
 // Configuration
 // ============================================================================
 
-#define STREAM_TASK_STACK_SIZE  2048
+#define STREAM_TASK_STACK_SIZE  4096
 #define STREAM_TASK_PRIORITY    8
 
 // ============================================================================

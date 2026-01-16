@@ -161,6 +161,13 @@ int hal_uart_read(hal_uart_port_t port, uint8_t *data, size_t len, int timeout_m
 int hal_uart_available(hal_uart_port_t port);
 
 /**
+ * @brief Check if async TX is in progress
+ * @param port UART port
+ * @return true if TX is in progress, false otherwise
+ */
+bool hal_uart_tx_busy(hal_uart_port_t port);
+
+/**
  * @brief Flush TX buffer (wait for all data to be sent)
  * @param port UART port
  * @param timeout_ms Timeout in milliseconds

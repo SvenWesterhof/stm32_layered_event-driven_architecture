@@ -518,6 +518,17 @@ uart_driver_status_t stm32_uart_send_packet_async(const uint8_t *data, size_t le
         }
     }
 
+    // Also wait for HAL layer TX to complete
+    uint32_t wait_start = os_get_time_ms();
+    while (hal_uart_tx_busy((hal_uart_port_t)STM32_UART_PORT)) {
+        if ((os_get_time_ms() - wait_start) > TX_MUTEX_TIMEOUT_MS) {
+            os_mutex_give(state.tx_mutex);
+            LOG_E(TAG, "HAL TX did not complete in time");
+            return UART_DRV_ERR_TIMEOUT;
+        }
+        os_delay_ms(1);
+    }
+
     // Build packet in the static TX buffer
     size_t tx_index = 0;
 
