@@ -3,6 +3,7 @@
 #include "serv_temperature_sensor.h"
 #include "serv_display.h"
 #include "serv_current_monitor.h"
+#include "protocol_handler.h"
 
 #ifdef ENABLE_UART_TEST
 #include "../../Tests/uart_test/serv_uart_test.h"
@@ -14,6 +15,7 @@ void services_init(void)
     temperature_sensor_init();
     display_init();
     current_monitor_init();
+    protocol_handler_init();
 
 #ifdef ENABLE_UART_TEST
     serv_uart_test_init();
