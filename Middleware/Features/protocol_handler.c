@@ -11,6 +11,7 @@
 #include "serv_current_monitor.h"
 #include "event_bus.h"
 #include "service_events.h"
+#include "hal_rtc.h"
 #include <string.h>
 
 static const char *TAG = "PROTO";
@@ -258,12 +259,13 @@ proto_handler_status_t protocol_handler_stop_stream(void)
         os_delay_ms(10);
     }
 
-    if (state.stream_task_handle != NULL) {
+    // Task deletes itself when it exits, so only force-delete if it didn't exit cleanly
+    if (state.streaming_active && state.stream_task_handle != NULL) {
         os_task_delete(state.stream_task_handle);
-        state.stream_task_handle = NULL;
     }
-
+    state.stream_task_handle = NULL;
     state.streaming_active = false;
+
     LOG_I(TAG, "Stopped streaming");
 
     return PROTO_HANDLER_OK;
@@ -375,8 +377,15 @@ static void handle_cmd_set_rtc(const protocol_packet_t *cmd)
 
     const cmd_set_rtc_t *rtc_cmd = (const cmd_set_rtc_t *)cmd->payload;
 
-    // TODO: Set RTC using HAL_RTC
-    LOG_I(TAG, "Set RTC: %lu", rtc_cmd->unix_time);
+    hal_rtc_status_t rtc_status = hal_rtc_set_time(rtc_cmd->unix_time, 0);
+    if (rtc_status != HAL_RTC_OK) {
+        LOG_E(TAG, "Failed to set RTC: %d", rtc_status);
+        protocol_handler_send_response(
+            cmd->cmd_id, cmd->seq, RESP_ERROR, NULL, 0);
+        return;
+    }
+
+    LOG_I(TAG, "RTC set to: %lu", rtc_cmd->unix_time);
 
     protocol_handler_send_response(
         cmd->cmd_id, cmd->seq, RESP_OK, NULL, 0);
