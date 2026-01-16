@@ -45,7 +45,7 @@ typedef enum {
 // Configuration Constants
 // ============================================================================
 
-#define STM32_UART_BAUD_RATE        115200
+#define STM32_UART_BAUD_RATE        921600
 #define STM32_UART_RX_BUFFER_SIZE   2048
 #define STM32_UART_TX_BUFFER_SIZE   1024
 #define STM32_UART_MAX_PACKET_SIZE  512

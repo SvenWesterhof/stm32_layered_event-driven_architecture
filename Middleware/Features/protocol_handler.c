@@ -255,7 +255,7 @@ proto_handler_status_t protocol_handler_stop_stream(void)
 
     // Wait for task to finish (with timeout)
     for (int i = 0; i < 100 && state.streaming_active; i++) {
-        os_delay(10);
+        os_delay_ms(10);
     }
 
     if (state.stream_task_handle != NULL) {
@@ -354,10 +354,8 @@ static void handle_cmd_get_status(const protocol_packet_t *cmd)
     status_resp.state = (uint8_t)meas_status;
     status_resp.error_code = 0;
 
-    // Get buffer count from current monitor stats
-    current_monitor_stats_t stats;
-    current_monitor_get_stats(&stats);
-    status_resp.buffer_count = (uint16_t)stats.samples_captured;
+    // Get temperature buffer count
+    status_resp.buffer_count = (uint16_t)temperature_sensor_buffer_get_count();
 
     // Uptime
     status_resp.uptime_sec = os_get_tick_count() / 1000;
@@ -414,14 +412,63 @@ static void handle_cmd_stop_measurement(const protocol_packet_t *cmd)
 
 static void handle_cmd_get_buffer_data(const protocol_packet_t *cmd)
 {
-    // For now, return "no data" - buffer implementation TODO
+    if (cmd->length < sizeof(cmd_get_buffer_data_t)) {
+        protocol_handler_send_response(
+            cmd->cmd_id, cmd->seq, RESP_INVALID_PARAM, NULL, 0);
+        return;
+    }
+
+    const cmd_get_buffer_data_t *req = (const cmd_get_buffer_data_t *)cmd->payload;
+
+    // Check if there's data available
+    uint32_t available = temperature_sensor_buffer_get_count();
+    if (available == 0) {
+        protocol_handler_send_response(
+            cmd->cmd_id, cmd->seq, RESP_NO_DATA, NULL, 0);
+        return;
+    }
+
+    // Calculate how many samples we can fit in response
+    // Response format: resp_buffer_data_header_t + sensor_sample_t[]
+    uint32_t max_samples_in_payload =
+        (PROTOCOL_MAX_PAYLOAD_SIZE - sizeof(resp_buffer_data_header_t)) / sizeof(sensor_sample_t);
+
+    uint32_t samples_to_read = req->count;
+    if (samples_to_read > max_samples_in_payload) {
+        samples_to_read = max_samples_in_payload;
+    }
+
+    // Prepare response buffer
+    uint8_t response_buf[PROTOCOL_MAX_PAYLOAD_SIZE];
+    resp_buffer_data_header_t *header = (resp_buffer_data_header_t *)response_buf;
+    sensor_sample_t *samples = (sensor_sample_t *)(response_buf + sizeof(resp_buffer_data_header_t));
+
+    // Read samples from buffer
+    uint32_t samples_read = 0;
+    bool success = temperature_sensor_buffer_read(
+        req->start_index, samples, samples_to_read, &samples_read);
+
+    if (!success || samples_read == 0) {
+        protocol_handler_send_response(
+            cmd->cmd_id, cmd->seq, RESP_NO_DATA, NULL, 0);
+        return;
+    }
+
+    // Fill header
+    header->sensor_type = SENSOR_TEMPERATURE;
+    header->sample_count = (uint16_t)samples_read;
+
+    // Calculate total response size
+    uint16_t payload_len = sizeof(resp_buffer_data_header_t) + (samples_read * sizeof(sensor_sample_t));
+
     protocol_handler_send_response(
-        cmd->cmd_id, cmd->seq, RESP_NO_DATA, NULL, 0);
+        cmd->cmd_id, cmd->seq, RESP_OK, response_buf, payload_len);
 }
 
 static void handle_cmd_clear_buffer(const protocol_packet_t *cmd)
 {
     current_monitor_clear();
+    temperature_sensor_buffer_clear();
 
     protocol_handler_send_response(
         cmd->cmd_id, cmd->seq, RESP_OK, NULL, 0);
@@ -467,7 +514,7 @@ static void stream_task(void *param)
 
         protocol_handler_send_sensor_sample(&sample);
 
-        os_delay(state.stream_interval_ms);
+        os_delay_ms(state.stream_interval_ms);
     }
 
     LOG_I(TAG, "Stream task exiting");
