@@ -308,7 +308,7 @@ stm32_uart_config_t stm32_uart_get_default_config(void)
 {
     stm32_uart_config_t config = {
         .baud_rate = STM32_UART_BAUD_RATE,
-        .use_flow_control = true,
+        .use_flow_control = false,
         .rx_timeout_ms = 1000,
         .callback = NULL,
         .user_data = NULL
