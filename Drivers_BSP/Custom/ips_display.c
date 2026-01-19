@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "ips_display.h"
 #include "st7735.h"
+#include "hal_gpio.h"
 
 static bool display_initialized = false;
 
@@ -28,7 +29,7 @@ ips_display_status_t ips_display_open() {
     ST7735_WriteString(10, 40, "Hum:  ", Font_11x18, ST7735_WHITE, ST7735_BLACK);
     
     // Enable backlight
-    HAL_GPIO_WritePin(DISPLAY_BACKLIGHT_PORT, DISPLAY_BACKLIGHT_PIN, GPIO_PIN_SET);
+    hal_gpio_write_pin((hal_gpio_port_t)DISPLAY_BACKLIGHT_PORT, DISPLAY_BACKLIGHT_PIN, HAL_GPIO_PIN_SET);
     
     display_initialized = true;
     return IPS_DISPLAY_OK;
@@ -40,7 +41,7 @@ ips_display_status_t ips_display_close() {
     }
     
     // Disable backlight
-    HAL_GPIO_WritePin(DISPLAY_BACKLIGHT_PORT, DISPLAY_BACKLIGHT_PIN, GPIO_PIN_RESET);
+    hal_gpio_write_pin((hal_gpio_port_t)DISPLAY_BACKLIGHT_PORT, DISPLAY_BACKLIGHT_PIN, HAL_GPIO_PIN_RESET);
     
     // Put display in sleep mode and turn off
     ST7735_Sleep();
