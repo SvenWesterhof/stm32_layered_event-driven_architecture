@@ -21,6 +21,9 @@ static uint8_t queue_head = 0;
 static uint8_t queue_tail = 0;
 static uint8_t queue_count = 0;
 
+// Statistics tracking
+static event_bus_stats_t stats = {0};
+
 /**
  * @brief Initialize the event bus
  */
@@ -28,11 +31,14 @@ void event_bus_init(void)
 {
     // Clear subscriber table
     memset(subscriber_table, 0, sizeof(subscriber_table));
-    
+
     // Clear event queue
     queue_head = 0;
     queue_tail = 0;
     queue_count = 0;
+
+    // Reset statistics
+    memset(&stats, 0, sizeof(stats));
 }
 
 /**
@@ -105,19 +111,23 @@ bool event_bus_unsubscribe(event_type_t event_type, event_callback_t callback)
 bool event_bus_publish(event_type_t event_type, void* data, uint32_t data_size)
 {
     if (queue_count >= EVENT_QUEUE_SIZE) {
+        stats.queue_overflow_count++;
+        stats.publish_fail_count++;
         return false; // Queue full
     }
-    
+
     if (data_size > MAX_EVENT_DATA_SIZE) {
+        stats.data_too_large_count++;
+        stats.publish_fail_count++;
         return false; // Data too large
     }
-    
+
     // Add event to queue
     event_t* event = &event_queue[queue_tail];
     event->type = event_type;
     event->data_size = data_size;
     event->timestamp = event_bus_get_tick();
-    
+
     // Copy event data into buffer to prevent stack corruption
     if (data != NULL && data_size > 0) {
         memcpy(event_data_buffer[queue_tail], data, data_size);
@@ -125,10 +135,16 @@ bool event_bus_publish(event_type_t event_type, void* data, uint32_t data_size)
     } else {
         event->data = NULL;
     }
-    
+
     queue_tail = (queue_tail + 1) % EVENT_QUEUE_SIZE;
     queue_count++;
-    
+
+    // Update statistics
+    stats.publish_success_count++;
+    if (queue_count > stats.max_queue_depth) {
+        stats.max_queue_depth = queue_count;
+    }
+
     return true;
 }
 
@@ -142,21 +158,24 @@ void event_bus_process(void)
     while (queue_count > 0) {
         // Get next event from queue
         event_t* event = &event_queue[queue_head];
-        
+
         // Notify all subscribers
         if (event->type < EVENT_USER_DEFINED_START) {
             event_subscriber_list_t* list = &subscriber_table[event->type];
-            
+
             for (uint8_t i = 0; i < list->subscriber_count; i++) {
                 if (list->callbacks[i] != NULL) {
                     list->callbacks[i](event);
                 }
             }
         }
-        
+
         // Move to next event
         queue_head = (queue_head + 1) % EVENT_QUEUE_SIZE;
         queue_count--;
+
+        // Update process count
+        stats.process_count++;
     }
 }
 
@@ -167,4 +186,30 @@ void event_bus_process(void)
 uint32_t event_bus_get_tick(void)
 {
     return hal_get_tick();
+}
+
+/**
+ * @brief Get event bus statistics
+ * @return Copy of current statistics
+ */
+event_bus_stats_t event_bus_get_stats(void)
+{
+    return stats;
+}
+
+/**
+ * @brief Reset event bus statistics
+ */
+void event_bus_reset_stats(void)
+{
+    memset(&stats, 0, sizeof(stats));
+}
+
+/**
+ * @brief Get current queue depth
+ * @return Number of events currently in queue
+ */
+uint8_t event_bus_get_queue_depth(void)
+{
+    return queue_count;
 }
