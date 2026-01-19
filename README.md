@@ -450,4 +450,4 @@ stm32_development/
 
 Ontwikkeld voor STM32F767ZI Nucleo board met FreeRTOS.
 
-**Voor verdere vragen of bijdragen, zie de issue tracker of contact de ontwikkelaar.**p
+**Voor verdere vragen of bijdragen, zie de issue tracker of contact de ontwikkelaar.**
