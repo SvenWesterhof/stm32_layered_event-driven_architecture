@@ -40,12 +40,27 @@ typedef void (*event_callback_t)(event_t* event);
 // Maximum number of subscribers per event type
 #define MAX_SUBSCRIBERS_PER_EVENT   5
 
+// Event Bus Statistics
+typedef struct {
+    uint32_t publish_success_count;    // Total successful publishes
+    uint32_t publish_fail_count;       // Total failed publishes
+    uint32_t queue_overflow_count;     // Queue full errors
+    uint32_t data_too_large_count;     // Data size exceeded
+    uint32_t process_count;            // Total events processed
+    uint32_t max_queue_depth;          // Maximum queue depth reached
+} event_bus_stats_t;
+
 // Event Bus Functions
 void event_bus_init(void);
 bool event_bus_subscribe(event_type_t event_type, event_callback_t callback);
 bool event_bus_unsubscribe(event_type_t event_type, event_callback_t callback);
 bool event_bus_publish(event_type_t event_type, void* data, uint32_t data_size);
 void event_bus_process(void);
+
+// Diagnostics Functions
+event_bus_stats_t event_bus_get_stats(void);
+void event_bus_reset_stats(void);
+uint8_t event_bus_get_queue_depth(void);
 
 // Helper function to get current tick (for timestamp)
 uint32_t event_bus_get_tick(void);
