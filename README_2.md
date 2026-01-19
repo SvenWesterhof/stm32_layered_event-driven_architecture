@@ -2,8 +2,6 @@
 
 Een productie-grade embedded firmware project dat industry best practices demonstreert voor de STM32F767 microcontroller met volledige architecturele scheiding, event-driven ontwerp en complete portabiliteit.
 
-> **Nota**: Dit is een geupdateerde versie van de originele README die de werkelijke implementatie nauwkeuriger reflecteert, inclusief bevindingen uit architectuuranalyse.
-
 ---
 
 ## Projectoverzicht
@@ -27,7 +25,7 @@ Dit project implementeert een geavanceerd temperatuurmonitoringsysteem met ESP32
 
 Het project volgt een **layered event-driven architecture** met strikte afhankelijkheden die alleen naar beneden gelden, wat zorgt voor lage koppeling en hoge portabiliteit.
 
-![Architectuur Diagram](docs/images/SW-embedded%20layered-event-driven%20style.png)
+![Architectuur Diagram](docs/images/LayeredEventDrivenArchitecture_light.svg)
 
 ### Laagbeschrijving
 
@@ -596,61 +594,10 @@ Test: Periodic transmission patterns
 
 ---
 
-## Contributing
-
-### Code Style
-- Follow existing naming conventions
-- Services: `serv_<name>`
-- HAL functions: `hal_<peripheral>_<action>`
-- Events: `EVENT_<NAME>`
-
-### Pull Request Guidelines
-1. Ensure no HAL abstraction violations
-2. Update this README if architecture changes
-3. Add unit tests for new services
-4. Document protocol changes in detail
-
----
-
 ## License & Attribution
 
 **Gebouwd met professionele architectuurprincipes voor productie-grade embedded systemen.**
 
 Ontwikkeld voor STM32F767ZI Nucleo board met FreeRTOS.
 
----
-
-## Changelog (README_2)
-
-### Wat is Nieuw in Deze Versie
-
-#### 🎉 **CRITICAL FIXES GEÏMPLEMENTEERD**
-- ✅ **HAL violation GEFIXT** - ips_display.c nu 100% portabel (gebruikt `hal_gpio_write_pin()`)
-- ✅ **Event bus diagnostics TOEGEVOEGD** - Volledige error tracking en statistics
-- ✅ **Portability score 100%** - Alle laagschendingen opgelost
-- ✅ **Overall grade A** - Production-ready status bereikt
-
-#### 📝 **Documentatie Verbeteringen**
-- ✅ **ESP32 protocol stack volledig gedocumenteerd** (was missing)
-- ✅ **Features layer correct beschreven** (was listed as "prepared")
-- ✅ **Bekende issues section toegevoegd** met prioriteiten
-- ✅ **Portability disclaimer** aangepast en gefixt
-- ✅ **Service status duidelijk** (current_monitor inactive)
-- ✅ **Event flow diagrams** toegevoegd
-- ✅ **UART baud rates** gedocumenteerd (921600 vs 115200)
-- ✅ **Performance metrics** toegevoegd
-- ✅ **Testing section** uitgebreid
-- ✅ **Lessons learned** toegevoegd
-
-### Architectuuranalyse Samenvatting
-- **Overall Grade**: ~~B+~~ → **A (Production-Ready)** ✅
-- **Portability Score**: ~~85/100~~ → **100/100** ✅
-- **Laagschendingen**: ~~1 kritieke~~ → **0** ✅ (ips_display.c GEFIXT)
-- **Event-driven implementatie**: Excellent (A+)
-- **Error handling & Diagnostics**: ~~Matig~~ → **Good** ✅ (Event bus stats toegevoegd)
-- **Code structuur**: Very good (A-)
-- **Documentatie**: Improved (was incomplete)
-
----
-
-**Voor verdere vragen of bijdragen, zie de issue tracker of contact de ontwikkelaar.**
+**Voor verdere vragen of bijdragen, zie de issue tracker of contact de ontwikkelaar.**p
