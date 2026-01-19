@@ -1,4 +1,4 @@
-# STM32 Embedded Project - Professionele Architectuur (GEUPDATEERDE VERSIE)
+# STM32 Embedded Project - Professionele Architectuur
 
 Een productie-grade embedded firmware project dat industry best practices demonstreert voor de STM32F767 microcontroller met volledige architecturele scheiding, event-driven ontwerp en complete portabiliteit.
 
@@ -173,19 +173,10 @@ De architectuur is ontworpen voor **complete platformonafhankelijkheid** en dit 
 - **BSP** - Board-specifiek (pinout, peripheralconfiguratie)
 - **HAL** - Platform-specifieke abstractie-implementatie
 
-#### ✅ **Portabiliteitsrisico OPGELOST**
-~~**ips_display.c** bevat directe `HAL_GPIO_WritePin()` calls~~ → **GEFIXT!**
-
-Alle custom drivers gebruiken nu consequent de HAL abstractie laag. Er zijn **geen** directe vendor HAL calls meer buiten de HAL layer zelf.
-
 **Om te porteren naar een ander MCU/platform:**
 1. Herimplementeer HAL-laag ([hal_gpio.c](HAL/hal_gpio.c), [hal_i2c.c](HAL/hal_i2c.c), [hal_uart.c](HAL/hal_uart.c), etc.)
 2. Update BSP-laag ([pinout.h](Drivers_BSP/BSP/pinout.h), [bsp.c](Drivers_BSP/BSP/bsp.c))
-3. ~~Fix [ips_display.c](Drivers_BSP/Custom/ips_display.c)~~ ✅ **Niet meer nodig - al gefixt!**
-4. **Alle andere lagen blijven ongewijzigd!**
-
-**Geschatte porting effort**: 1-2 weken voor ervaren embedded engineer (geen hidden surprises meer!).
-
+3. **Alle andere lagen blijven ongewijzigd!**
 
 ### 3. **Event-Driven Architectuur**
 
@@ -240,11 +231,6 @@ HAL → Hardware
 - BSP gebruikt alleen HAL functies
 - Custom drivers (ath25.c, ina226.c) gebruiken consequent HAL
 
-⚠️ **Uitzondering**:
-- [ips_display.c:31,43](Drivers_BSP/Custom/ips_display.c#L31) gebruikt direct `HAL_GPIO_WritePin()` (STM32-specifiek) in plaats van `hal_gpio_write_pin()`
-
-**Impact**: Dit is een kleine schending die de portabiliteit vermindert. Fix is eenvoudig.
-
 ### 5. **Modulair & Testbaar**
 
 - Elke service is onafhankelijk
@@ -277,15 +263,6 @@ void services_run(void) {
 #endif
 }
 ```
-
-### 6. **Schaalbaar**
-
-Klaar voor uitbreiding:
-- ✅ Voeg meer sensors toe (abonneer op events) - INA226 al aanwezig
-- ✅ Voeg logging service toe - via event subscriptions
-- ✅ Voeg netwerkcommunicatie toe - protocol stack al aanwezig (ESP32 UART)
-- ⏳ Implementeer controle-algoritmen - Control layer voorbereid
-- ✅ Integreer RTOS - FreeRTOS al actief gebruikt
 
 ---
 
@@ -328,7 +305,7 @@ stm32_development/
 │   ├── Custom/             # Custom device drivers
 │   │   ├── ath25.*         # Temperature/humidity sensor driver (I2C)
 │   │   ├── ina226.*        # Current/voltage sensor driver (I2C)
-│   │   └── ips_display.*   # IPS display driver (SPI) ⚠️ HAL violation
+│   │   └── ips_display.*   # IPS display driver (SPI) 
 │   │
 │   └── External/           # Third-party drivers
 │       └── ST7735/         # ST7735 display controller driver
@@ -418,133 +395,6 @@ stm32_development/
 6. **Command Pattern** - Protocol handler command routing
 7. **State Machine** - Protocol streaming state management
 8. **Ring Buffer** - Efficient circular buffer voor sensor data history
-
----
-
-## Build & Flash
-
-### Prerequisites
-- ARM GCC toolchain (`arm-none-eabi-gcc`)
-- CMake 3.15+
-- OpenOCD of STM32CubeProgrammer
-- STM32F767ZI Nucleo board
-
-### Build
-```bash
-mkdir build && cd build
-cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/gcc-arm-none-eabi.cmake ..
-make
-```
-
-### Flash
-```bash
-# Via OpenOCD
-openocd -f interface/stlink.cfg -f target/stm32f7x.cfg -c "program build/stm32_development.elf verify reset exit"
-
-# Via STM32CubeProgrammer
-STM32_Programmer_CLI -c port=SWD -w build/stm32_development.elf -v -rst
-```
-
----
-
-## Testing & Debugging
-
-### UART Test Service
-Een speciale test service is beschikbaar voor logic analyzer verificatie:
-
-```c
-// Enable in services.c
-#define ENABLE_UART_TEST
-
-// Configuration
-Baud rate: 115200 (8N1)
-Test: Periodic transmission patterns
-```
-
-**Nota**: Protocol handler gebruikt **921600 baud** voor ESP32 communicatie. Zorg dat je de juiste baud rate selecteert voor je test scenario.
-
-### Logic Analyzer Pins
-- UART2 TX: Pin configuratie in [pinout.h](Drivers_BSP/BSP/pinout.h)
-- UART2 RX: Pin configuratie in [pinout.h](Drivers_BSP/BSP/pinout.h)
-
----
-
-## Bekende Issues & Verbeteringen
-
-### ✅ FIXED - Priority 1 (Critical) - Portability Fix
-1. **~~ips_display.c HAL violation~~** ✅ **RESOLVED**
-   - **Was**: Direct `HAL_GPIO_WritePin()` gebruikt in plaats van `hal_gpio_write_pin()`
-   - **Fix**: Alle directe HAL calls vervangen door HAL abstraction laag
-   - **Status**: ✅ **GEFIXT** - Volledige portabiliteit hersteld
-   - **Files gewijzigd**: [ips_display.c](Drivers_BSP/Custom/ips_display.c)
-   - **Impact**: Portabiliteit score verhoogd van 85% → **100%**
-
-### ✅ FIXED - Priority 1 (Critical) - Event Bus Robustness
-2. **~~Event queue error diagnostics~~** ✅ **RESOLVED**
-   - **Was**: Geen monitoring van event queue overflows en failures
-   - **Fix**: Volledige diagnostics toegevoegd met statistieken
-   - **Status**: ✅ **GEÏMPLEMENTEERD**
-   - **Files gewijzigd**: [event_bus.h](OS/event_bus.h), [event_bus.c](OS/event_bus.c)
-   - **Nieuwe features**:
-     ```c
-     // Statistieken beschikbaar via:
-     event_bus_stats_t stats = event_bus_get_stats();
-     // Tracked metrics:
-     // - publish_success_count
-     // - publish_fail_count
-     // - queue_overflow_count
-     // - data_too_large_count
-     // - process_count
-     // - max_queue_depth
-
-     // Runtime monitoring:
-     uint8_t depth = event_bus_get_queue_depth();
-     event_bus_reset_stats();  // Reset counters
-     ```
-
-### Priority 2 (High) - Feature Activation
-3. **current_monitor_process() commented out** ([services.c:30](Middleware/Services/services.c#L30))
-   - **Probleem**: INA226 service geïmplementeerd maar niet actief
-   - **Actie**: Uncomment of verwijder als niet gebruikt
-
-### Priority 3 (Medium) - Improvements
-4. **UART baud rate documentatie**
-   - Protocol handler: 921600 baud (ESP32 communicatie)
-   - UART test: 115200 baud (debug/verificatie)
-   - **Actie**: Duidelijk documenteren in code comments
-
-5. **Event queue monitoring** ✅ **PARTIALLY RESOLVED**
-   - Current: 16 events max
-   - ✅ **Runtime monitoring nu beschikbaar** via `event_bus_get_queue_depth()` en `event_bus_get_stats()`
-   - Bij hoge publication rate mogelijk overflow → gebruik `stats.queue_overflow_count` om te detecteren
-   - **Actie**: Monitor in productie, verhoog EVENT_QUEUE_SIZE indien `max_queue_depth` te dicht bij 16 komt
-
-6. **Protocol handler task cleanup**
-   - `protocol_handler_deinit()` bestaat maar wordt nooit aangeroepen
-   - Potentiële task leak bij herhaalde start/stop
-   - **Actie**: Add proper lifecycle management
-
----
-
-## Future Roadmap
-
-### Short-term
-- [ ] Fix ips_display.c HAL violation
-- [ ] Enable/document current_monitor service
-- [ ] Add event queue overflow diagnostics
-- [ ] Unit tests voor protocol handler
-
-### Medium-term
-- [ ] Implement Control layer (PID, state machines)
-- [ ] Add filesystem support (sensor data logging)
-- [ ] WiFi/Ethernet connectivity via ESP32
-- [ ] Power management modes
-
-### Long-term
-- [ ] OTA firmware updates
-- [ ] Cloud connectivity (MQTT, HTTP)
-- [ ] Advanced data analytics
-- [ ] Multi-board synchronization
 
 ---
 
