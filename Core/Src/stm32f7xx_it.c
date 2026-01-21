@@ -22,6 +22,7 @@
 #include "stm32f7xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "SEGGER_RTT.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -88,7 +89,8 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-
+  SEGGER_RTT_WriteString(0, "\n*** HARD FAULT DETECTED ***\n");
+  SEGGER_RTT_WriteString(0, "System crashed - check stack and memory\n");
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {

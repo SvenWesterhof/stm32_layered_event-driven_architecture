@@ -1,0 +1,27 @@
+
+
+OpenDocument="syscalls.c", FilePath="C:/Users/svenw/Documents/stm_specialization/stm32_development/Core/Src/syscalls.c", Line=107
+OpenDocument="SEGGER_RTT.c", FilePath="C:/Users/svenw/Documents/stm_specialization/stm32_development/Middleware/SEGGER/SEGGER/SEGGER_RTT.c", Line=1883
+OpenDocument="startup_stm32f767xx.s", FilePath="C:/Users/svenw/Documents/stm_specialization/stm32_development/startup_stm32f767xx.s", Line=80
+OpenDocument="rtt_logging_test.c", FilePath="C:/Users/svenw/Documents/stm_specialization/stm32_development/Utils/rtt_logging_test.c", Line=12
+OpenDocument="main.c", FilePath="C:/Users/svenw/Documents/stm_specialization/stm32_development/Core/Src/main.c", Line=85
+OpenDocument="serv_blinky.c", FilePath="C:/Users/svenw/Documents/stm_specialization/stm32_development/Middleware/Services/serv_blinky.c", Line=0
+OpenDocument="stm32_project.jdebug", FilePath="C:/Users/svenw/Documents/stm_specialization/stm32_development/stm32_project.jdebug", Line=46
+OpenDocument="services.c", FilePath="C:/Users/svenw/Documents/stm_specialization/stm32_development/Middleware/Services/services.c", Line=0
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Call Stack", DockArea=RIGHT, x=0, y=1, w=300, h=119, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Registers 1", DockArea=RIGHT, x=0, y=3, w=300, h=178, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, FilteredItems=[], RefreshRate=1
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=300, h=209, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Memory 1", DockArea=BOTTOM, x=2, y=0, w=1216, h=321, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, EditorAddress=0x0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=0, w=470, h=621, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Terminal", DockArea=BOTTOM, x=0, y=0, w=684, h=321, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Console", DockArea=BOTTOM, x=1, y=0, w=658, h=321, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="FreeRTOS", DockArea=RIGHT, x=0, y=2, w=300, h=112, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, Showing="Task List"
+SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
+TableHeader="Functions", SortCol="Name", SortOrder="DESCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[1236;100;100;100;242]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="Registers 1", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Description"], ColWidths=[100;105;224]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[26;26;26;31]
+TableHeader="Call Stack", SortCol="Function", SortOrder="ASCENDING", VisibleCols=["Function";"Stack Frame";"Source";"PC";"Return Address";"Stack Used"], ColWidths=[100;112;128;100;168;100]
+TableHeader="Task List", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Name";"Run Count";"Priority";"Status";"Timeout";"Stack Info";"ID";"Mutex Count";"Notified Value";"Notify State"], ColWidths=[110;110;110;110;110;110;110;110;110;110]

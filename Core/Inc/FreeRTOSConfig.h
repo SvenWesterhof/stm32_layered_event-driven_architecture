@@ -155,6 +155,36 @@ standard names. */
 
 /* USER CODE BEGIN Defines */
 /* Section where parameter definitions can be added (for instance, to override default ones in FreeRTOS.h) */
+
+// Performance monitoring features
+#define configUSE_STATS_FORMATTING_FUNCTIONS     1
+#define INCLUDE_xTaskGetIdleTaskHandle           1
+#define INCLUDE_pxTaskGetStackStart              1
+
+/* Runtime statistics - requires a timer
+ * Note: You need to implement these macros for your timer
+ * Example using DWT cycle counter (Cortex-M):
+ * extern volatile uint32_t uwTick;
+ * #define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() do { \
+ *     CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk; \
+ *     DWT->CYCCNT = 0; \
+ *     DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk; \
+ * } while(0)
+ * #define portGET_RUN_TIME_COUNTER_VALUE() DWT->CYCCNT
+ */
+
+// For now, comment out until timer is configured:
+// #define configGENERATE_RUN_TIME_STATS            1
+
+// SEGGER SystemView integration (when enabled)
+#if USE_SEGGER_SYSTEMVIEW
+  #include "SEGGER_SYSVIEW_FreeRTOS.h"
+  
+  // Enable trace hooks for SystemView (handled by SEGGER_SYSVIEW_FreeRTOS.h)
+  #define configUSE_TRACE_FACILITY                1
+  #define configUSE_STATS_FORMATTING_FUNCTIONS    1
+#endif
+
 /* USER CODE END Defines */
 
 #endif /* FREERTOS_CONFIG_H */

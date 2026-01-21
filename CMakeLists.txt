@@ -43,7 +43,7 @@ add_subdirectory(HAL)
 add_subdirectory(Drivers_BSP)
 add_subdirectory(OS)
 add_subdirectory(Utils)
-
+add_subdirectory(Middleware/SEGGER)
 
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
@@ -73,6 +73,26 @@ list(REMOVE_ITEM CMAKE_C_IMPLICIT_LINK_LIBRARIES ob)
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
-
+    SEGGER_SystemView
     # Add user defined libraries
+)
+
+# Generate binary and hex files for flashing
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.bin
+    COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.hex
+    COMMENT "Generating .bin and .hex files for flashing"
+)
+
+# Print file sizes and locations
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_SIZE} $<TARGET_FILE:${CMAKE_PROJECT_NAME}>
+    COMMENT "File sizes:"
+)
+
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E echo "Flash files generated:"
+    COMMAND ${CMAKE_COMMAND} -E echo "  Binary: ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.bin"
+    COMMAND ${CMAKE_COMMAND} -E echo "  Hex:    ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.hex"
+    COMMAND ${CMAKE_COMMAND} -E echo "  ELF:    $<TARGET_FILE:${CMAKE_PROJECT_NAME}>"
 )

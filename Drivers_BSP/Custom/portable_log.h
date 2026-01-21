@@ -11,6 +11,7 @@
 #define PORTABLE_LOG_H
 
 #define STM32F7
+#define USE_SEGGER_RTT
 
 // ============================================================================
 // Platform Detection
