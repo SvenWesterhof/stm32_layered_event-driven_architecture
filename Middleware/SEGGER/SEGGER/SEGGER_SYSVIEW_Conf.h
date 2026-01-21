@@ -92,6 +92,17 @@ Additional information:
 **********************************************************************
 */
 
+// Configure for Cortex-M7 (STM32F767)
+// Use DWT cycle counter for high-resolution timestamps
+#define SEGGER_SYSVIEW_GET_TIMESTAMP()      (*(U32 *)(0xE0001004))  // DWT->CYCCNT
+#define SEGGER_SYSVIEW_GET_INTERRUPT_ID()   ((*(U32*)(0xE000ED04)) & 0x1FF)  // ICSR[8:0]
+
+// Use RTT channel 1 for SystemView (channel 0 is for terminal)
+#define SEGGER_SYSVIEW_RTT_CHANNEL          1
+
+// Increase buffer size for high-speed 216 MHz operation (default is 1KB, too small)
+#define SEGGER_SYSVIEW_RTT_BUFFER_SIZE      (4096)  // 4KB buffer for SystemView
+
 
 #endif  // SEGGER_SYSVIEW_CONF_H
 

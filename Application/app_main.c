@@ -22,11 +22,15 @@ void app_init(void)
     LOG_I(TAG, "Services initialized");
     systemview_mark_event("Services Ready");
 
+    LOG_I(TAG, "About to call rtt_test_logging()...");
     // Test RTT logging now that everything is stable
-    rtt_test_logging();
-    
+    // TEMPORARILY DISABLED: rtt_test_logging();
+    LOG_I(TAG, "RTT test SKIPPED");
+
+    LOG_I(TAG, "About to call systemview_demo_start()...");
     // Start SystemView demonstration
     systemview_demo_start();
+    LOG_I(TAG, "SystemView demo start completed");
 
     LOG_I(TAG, "Application initialized successfully");
     systemview_mark_event("App Init Complete");
