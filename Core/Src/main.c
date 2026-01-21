@@ -80,7 +80,6 @@ static void MX_USART2_UART_Init(void);
 void StartDefaultTask(void *argument);
 
 /* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -115,7 +114,18 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
+  SEGGER_RTT_WriteString(0, "=== Clock configured to 216MHz (8MHz HSE) ===\n");
 
+  // CRITICAL: Reinitialize HAL tick timer after clock config
+  // HAL_Init() configured TIM6 at 16MHz, but now we're at 216MHz
+  HAL_InitTick(TICK_INT_PRIORITY);
+
+  SEGGER_RTT_printf(0, "HAL tick reinitialized successfully\n");
+
+  // Enable DWT cycle counter for SystemView timestamps
+  CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+  DWT->CYCCNT = 0;
+  DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -124,20 +134,41 @@ int main(void)
   MX_I2C2_Init();
   MX_SPI1_Init();
   MX_I2C4_Init();
-  MX_RTC_Init();
+  MX_RTC_Init();  // DISABLED: No LSE crystal on board, causes hang
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  // Initialize SEGGER RTT for logging
-  SEGGER_RTT_Init();
   SEGGER_RTT_WriteString(0, "\n=== STM32F767 Application Starting ===\n");
   SEGGER_RTT_printf(0, "System Clock: %lu Hz\n", HAL_RCC_GetSysClockFreq());
   SEGGER_RTT_printf(0, "HAL Tick: %lu ms\n", HAL_GetTick());
-  
-  // Initialize SEGGER SystemView BEFORE app_init to catch all events
+
+  // Check reset reason
+  if (__HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST)) {
+    SEGGER_RTT_WriteString(0, "RESET: Independent Watchdog\n");
+  }
+  if (__HAL_RCC_GET_FLAG(RCC_FLAG_WWDGRST)) {
+    SEGGER_RTT_WriteString(0, "RESET: Window Watchdog\n");
+  }
+  if (__HAL_RCC_GET_FLAG(RCC_FLAG_SFTRST)) {
+    SEGGER_RTT_WriteString(0, "RESET: Software Reset\n");
+  }
+  if (__HAL_RCC_GET_FLAG(RCC_FLAG_PORRST)) {
+    SEGGER_RTT_WriteString(0, "RESET: Power-On Reset\n");
+  }
+  if (__HAL_RCC_GET_FLAG(RCC_FLAG_PINRST)) {
+    SEGGER_RTT_WriteString(0, "RESET: External Pin\n");
+  }
+  __HAL_RCC_CLEAR_RESET_FLAGS();
+
+  // Initialize SEGGER SystemView configuration (recording starts after scheduler)
+#if USE_SEGGER_SYSTEMVIEW
   SEGGER_SYSVIEW_Conf();
-  SEGGER_RTT_WriteString(0, "SEGGER SystemView configured (auto-start on debugger connect)\n");
-  
-  app_init();
+  SEGGER_RTT_WriteString(0, "SEGGER SystemView configured (will start after scheduler init)\n");
+#else
+  SEGGER_RTT_WriteString(0, "SEGGER SystemView: Disabled\n");
+#endif
+
+  // NOTE: app_init() moved to StartDefaultTask() to run AFTER FreeRTOS scheduler is initialized
+  // This prevents creating FreeRTOS tasks/queues before scheduler is ready
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -164,7 +195,6 @@ int main(void)
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -210,14 +240,13 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE|RCC_OSCILLATORTYPE_LSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.LSEState = RCC_LSE_ON;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 8;
-  RCC_OscInitStruct.PLL.PLLN = 216;
+  RCC_OscInitStruct.PLL.PLLN = 432;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 2;
   RCC_OscInitStruct.PLL.PLLR = 2;
@@ -488,6 +517,7 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
+  __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
@@ -542,14 +572,31 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
+  /* Start SystemView recording now that scheduler is running */
+#if USE_SEGGER_SYSTEMVIEW
+  static uint8_t sysview_started = 0;
+  if (!sysview_started) {
+    SEGGER_SYSVIEW_Start();
+    SEGGER_RTT_WriteString(0, "SEGGER SystemView recording started from task\n");
+    SEGGER_RTT_printf(0, "SystemView State: %d\n", SEGGER_SYSVIEW_IsStarted());
+    sysview_started = 1;
+  }
+#endif
+
   /* Initialize OS wrapper */
   os_init();
+
+  /* Initialize application AFTER FreeRTOS scheduler is running
+   * This is critical because app_init() creates FreeRTOS tasks/queues via UART driver init */
+  SEGGER_RTT_WriteString(0, "Initializing application (post-scheduler)...\n");
+  app_init();
+  SEGGER_RTT_WriteString(0, "Application initialized successfully\n");
+
   /* Infinite loop */
   for(;;)
   {
     /* Run your application logic here */
     app_run();
-    
     /* Small delay to yield to other tasks */
     osDelay(10);
   }
@@ -632,7 +679,7 @@ void Error_Handler(void)
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
-  /* User can add his own implementation to report the file name and line number,
+ /* User can add his own implementation to report the file name and line number,
      ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
