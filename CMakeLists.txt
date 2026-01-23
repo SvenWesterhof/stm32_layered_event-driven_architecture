@@ -36,6 +36,15 @@ add_executable(${CMAKE_PROJECT_NAME})
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
 
+# CRITICAL: Configure FreeRTOS with SEGGER SystemView trace macros (survives STM32CubeMX regeneration)
+# Without this, FreeRTOS kernel sources (tasks.c, queue.c, etc.) compile without trace macros
+# This MUST be after add_subdirectory(cmake/stm32cubemx) so the FreeRTOS target exists
+target_compile_definitions(FreeRTOS PRIVATE USE_SEGGER_SYSTEMVIEW=1)
+target_include_directories(FreeRTOS PRIVATE
+    ${CMAKE_SOURCE_DIR}/Middleware/SEGGER/Patch
+    ${CMAKE_SOURCE_DIR}/Middleware/SEGGER/SEGGER
+)
+
 # New layered architecture subdirectories
 add_subdirectory(Application)
 add_subdirectory(Middleware)

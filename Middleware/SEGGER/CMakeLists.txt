@@ -17,6 +17,5 @@ target_include_directories(SEGGER_SystemView PUBLIC
 )
 
 target_compile_definitions(SEGGER_SystemView PUBLIC
-    USE_SEGGER_SYSTEMVIEW=1
     RTT_USE_ASM=0
 )

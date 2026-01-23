@@ -19,7 +19,7 @@ void services_init(void)
 
     SEGGER_RTT_printf(0, "Services: Initializing temperature sensor...\n");
     // TEMPORARILY DISABLED: temperature_sensor_init() crashes (I2C issue at 216MHz?)
-    // temperature_sensor_init();
+    temperature_sensor_init();
     SEGGER_RTT_printf(0, "Services: Temperature sensor SKIPPED (disabled for debugging)\n");
 
     SEGGER_RTT_printf(0, "Services: Initializing display...\n");
@@ -44,10 +44,9 @@ void services_init(void)
 void services_run(void)
 {
     blinky_run();
-    // TEMPORARILY DISABLED: temperature_sensor_run() (sensor init was skipped)
-    // temperature_sensor_run();
+    temperature_sensor_run();
     display_run();
-    // current_monitor_process();
+    current_monitor_process();
 
 #ifdef ENABLE_UART_TEST
     serv_uart_test_loop();

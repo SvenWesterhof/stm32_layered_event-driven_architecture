@@ -186,6 +186,7 @@ standard names. */
 // This must be at the end of FreeRTOSConfig.h to override trace macros
 #if USE_SEGGER_SYSTEMVIEW
   #include "SEGGER_SYSVIEW_FreeRTOS.h"
+  //add trace macros
 #endif
 
 /* USER CODE END Defines */
