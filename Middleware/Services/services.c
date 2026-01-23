@@ -4,35 +4,31 @@
 #include "serv_display.h"
 #include "serv_current_monitor.h"
 #include "protocol_handler.h"
+#include "portable_log.h"
 
 #ifdef ENABLE_UART_TEST
 #include "../../Tests/uart_test/serv_uart_test.h"
 #endif
 
+static const char *TAG = "SERVICES";
+
 void services_init(void)
 {
-    extern int SEGGER_RTT_printf(unsigned BufferIndex, const char * sFormat, ...);
 
-    SEGGER_RTT_printf(0, "Services: Initializing blinky...\n");
     blinky_init();
-    SEGGER_RTT_printf(0, "Services: Blinky OK\n");
+    LOG_I(TAG, "Blinky initialized\n");
 
-    SEGGER_RTT_printf(0, "Services: Initializing temperature sensor...\n");
-    // TEMPORARILY DISABLED: temperature_sensor_init() crashes (I2C issue at 216MHz?)
     temperature_sensor_init();
-    SEGGER_RTT_printf(0, "Services: Temperature sensor SKIPPED (disabled for debugging)\n");
-
-    SEGGER_RTT_printf(0, "Services: Initializing display...\n");
+    LOG_I(TAG, "Temperature sensor initialized\n");
+    
     display_init();
-    SEGGER_RTT_printf(0, "Services: Display OK\n");
+    LOG_I(TAG, "Display initialized\n");
 
-    SEGGER_RTT_printf(0, "Services: Initializing current monitor...\n");
     current_monitor_init();
-    SEGGER_RTT_printf(0, "Services: Current monitor OK\n");
+    LOG_I(TAG, "Current monitor initialized\n");
 
-    SEGGER_RTT_printf(0, "Services: Initializing protocol handler...\n");
     protocol_handler_init();
-    SEGGER_RTT_printf(0, "Services: Protocol handler OK\n");
+    LOG_I(TAG, "Protocol handler initialized\n");
 
 #ifdef ENABLE_UART_TEST
     SEGGER_RTT_printf(0, "Services: Initializing UART test...\n");

@@ -22,7 +22,7 @@
 #include "stm32f7xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "SEGGER_RTT.h"
+#include "portable_log.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,7 +42,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+static const char *TAG = "ISR";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -89,8 +89,7 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-  SEGGER_RTT_WriteString(0, "\n*** HARD FAULT DETECTED ***\n");
-  SEGGER_RTT_WriteString(0, "System crashed - check stack and memory\n");
+  LOG_E(TAG, "\n*** HARD FAULT DETECTED ***\n");
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {

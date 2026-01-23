@@ -64,10 +64,6 @@ void vApplicationStackOverflowHook(xTaskHandle xTask, signed char *pcTaskName)
    (void)xTask;
    LOG_E(TAG, "STACK OVERFLOW in task: %s", pcTaskName);
 
-   // Also log via RTT for SystemView debugging
-   extern int SEGGER_RTT_printf(unsigned BufferIndex, const char * sFormat, ...);
-   SEGGER_RTT_printf(0, "\n!!! STACK OVERFLOW in task: %s !!!\n", pcTaskName);
-
    __disable_irq();
    while (1) {
       // Halt here for debugger

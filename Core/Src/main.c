@@ -24,6 +24,7 @@
 /* USER CODE BEGIN Includes */
 #include "app_main.h"
 #include "os_wrapper.h"
+#include "portable_log.h"
 #include "SEGGER_SYSVIEW.h"
 #include "SEGGER_RTT.h"
 /* USER CODE END Includes */
@@ -60,11 +61,11 @@ DMA_HandleTypeDef hdma_usart2_tx;
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
-  .stack_size = 512 * 4,
+  .stack_size = 512 * 4,  // 2KB - sufficient with optimized logging (no stack buffers)
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
-
+static const char *TAG = "MAIN";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -104,7 +105,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+  HAL_Init(); 
 
   /* USER CODE BEGIN Init */
 
@@ -114,13 +115,13 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-  SEGGER_RTT_WriteString(0, "=== Clock configured to 216MHz (8MHz HSE) ===\n");
+  LOG_I(TAG, "=== Clock configured to 180MHz (8MHz HSE) ===\n");
 
   // CRITICAL: Reinitialize HAL tick timer after clock config
-  // HAL_Init() configured TIM6 at 16MHz, but now we're at 216MHz
+  // HAL_Init() configured TIM6 at 16MHz, but now we're at 180MHz
   HAL_InitTick(TICK_INT_PRIORITY);
 
-  SEGGER_RTT_printf(0, "HAL tick reinitialized successfully\n");
+  LOG_I(TAG, "HAL tick reinitialized successfully\n");
 
   // Enable DWT cycle counter for SystemView timestamps
   CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
@@ -137,38 +138,36 @@ int main(void)
   MX_RTC_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  SEGGER_RTT_WriteString(0, "\n=== STM32F767 Application Starting ===\n");
-  SEGGER_RTT_printf(0, "System Clock: %lu Hz\n", HAL_RCC_GetSysClockFreq());
-  SEGGER_RTT_printf(0, "HAL Tick: %lu ms\n", HAL_GetTick());
+  LOG_I(TAG, "\n=== STM32F767 Application Starting ===\n");
+  LOG_I(TAG, "System Clock: %lu Hz\n", HAL_RCC_GetSysClockFreq());
+  LOG_I(TAG, "HAL Tick: %lu ms\n", HAL_GetTick());
 
   // Check reset reason
   if (__HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST)) {
-    SEGGER_RTT_WriteString(0, "RESET: Independent Watchdog\n");
+    LOG_I(TAG, "RESET: Independent Watchdog\n");
   }
   if (__HAL_RCC_GET_FLAG(RCC_FLAG_WWDGRST)) {
-    SEGGER_RTT_WriteString(0, "RESET: Window Watchdog\n");
+    LOG_I(TAG, "RESET: Window Watchdog\n");
   }
   if (__HAL_RCC_GET_FLAG(RCC_FLAG_SFTRST)) {
-    SEGGER_RTT_WriteString(0, "RESET: Software Reset\n");
+    LOG_I(TAG, "RESET: Software Reset\n");
   }
   if (__HAL_RCC_GET_FLAG(RCC_FLAG_PORRST)) {
-    SEGGER_RTT_WriteString(0, "RESET: Power-On Reset\n");
+    LOG_I(TAG, "RESET: Power-On Reset\n");
   }
   if (__HAL_RCC_GET_FLAG(RCC_FLAG_PINRST)) {
-    SEGGER_RTT_WriteString(0, "RESET: External Pin\n");
+    LOG_I(TAG, "RESET: External Pin\n");
   }
   __HAL_RCC_CLEAR_RESET_FLAGS();
 
   // Initialize SEGGER SystemView configuration (recording starts after scheduler)
 #if USE_SEGGER_SYSTEMVIEW
   SEGGER_SYSVIEW_Conf();
-  SEGGER_RTT_WriteString(0, "SEGGER SystemView configured (will start after scheduler init)\n");
+  LOG_I(TAG, "SEGGER SystemView configured (will start after scheduler init)\n");
 #else
-  SEGGER_RTT_WriteString(0, "SEGGER SystemView: Disabled\n");
+  LOG_I(TAG, "SEGGER SystemView: Disabled\n");
 #endif
 
-  // NOTE: app_init() moved to StartDefaultTask() to run AFTER FreeRTOS scheduler is initialized
-  // This prevents creating FreeRTOS tasks/queues before scheduler is ready
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -195,6 +194,7 @@ int main(void)
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
+  /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -570,20 +570,23 @@ void StartDefaultTask(void *argument)
   static uint8_t sysview_started = 0;
   if (!sysview_started) {
     SEGGER_SYSVIEW_Start();
-    SEGGER_RTT_WriteString(0, "SEGGER SystemView recording started from task\n");
-    SEGGER_RTT_printf(0, "SystemView State: %d\n", SEGGER_SYSVIEW_IsStarted());
+    LOG_I(TAG, "SEGGER SystemView recording started\n");
+    LOG_I(TAG, "SystemView State: %d\n", SEGGER_SYSVIEW_IsStarted());
     sysview_started = 1;
   }
 #endif
 
-  /* Initialize OS wrapper */
-  os_init();
+  //LOG_I(TAG, "Scheduler started, defaultTask running\n");
 
-  /* Initialize application AFTER FreeRTOS scheduler is running
-   * This is critical because app_init() creates FreeRTOS tasks/queues via UART driver init */
-  SEGGER_RTT_WriteString(0, "Initializing application (post-scheduler)...\n");
+  // IMPORTANT: Must initialize OS wrapper and application AFTER osKernelStart()
+  // because services_init() initializes hardware (I2C, SPI, sensors) that use
+  // HAL_GetTick() for timeouts. HAL_GetTick() only works after osKernelStart()
+  // since osKernelInitialize() reconfigures the SysTick timer.
+  os_init();
+  //LOG_I(TAG, "OS wrapper initialized\n");
+
   app_init();
-  SEGGER_RTT_WriteString(0, "Application initialized successfully\n");
+  LOG_I(TAG, "Application initialized successfully\n");
 
   /* Infinite loop */
   for(;;)

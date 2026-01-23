@@ -81,24 +81,39 @@
         #define LOG_COLOR_RESET   ""
     #endif
     
-    // Internal helper
-    #define _LOG_PRINTF(level_char, color, tag, format, ...) \
-        do { \
-            char _buf[256]; \
-            snprintf(_buf, sizeof(_buf), color "%c (%lu) %s: " format LOG_COLOR_RESET "\n", \
-                     level_char, (unsigned long)(HAL_GetTick()), tag, ##__VA_ARGS__); \
-            LOG_OUTPUT(_buf); \
-        } while(0)
-    
+    // Internal helper - Direct SEGGER_RTT_printf (zero stack allocation)
+    // SEGGER_RTT_printf is thread-safe and uses internal buffers
+    #if defined(USE_SEGGER_RTT)
+        #define _LOG_PRINTF(level_char, color, tag, format, ...) \
+            SEGGER_RTT_printf(0, color "%c (%lu) %s: " format LOG_COLOR_RESET "\n", \
+                             level_char, (unsigned long)(HAL_GetTick()), tag, ##__VA_ARGS__)
+    #else
+        // Fallback: Use stack buffer for ITM (no printf support)
+        #define _LOG_PRINTF(level_char, color, tag, format, ...) \
+            do { \
+                char _buf[128]; \
+                snprintf(_buf, sizeof(_buf), color "%c (%lu) %s: " format LOG_COLOR_RESET "\n", \
+                         level_char, (unsigned long)(HAL_GetTick()), tag, ##__VA_ARGS__); \
+                LOG_OUTPUT(_buf); \
+            } while(0)
+    #endif
+
     // Log macros
     #define LOG_I(tag, format, ...)  _LOG_PRINTF('I', "", tag, format, ##__VA_ARGS__)
     #define LOG_W(tag, format, ...)  _LOG_PRINTF('W', LOG_COLOR_YELLOW, tag, format, ##__VA_ARGS__)
     #define LOG_E(tag, format, ...)  _LOG_PRINTF('E', LOG_COLOR_RED, tag, format, ##__VA_ARGS__)
     
-    // Debug logs can be compiled out for STM32 (size optimization)
+    // Debug logs (can be compiled out for size optimization)
     #ifdef LOG_LEVEL_DEBUG
-        #define LOG_D(tag, format, ...)  _LOG_PRINTF('D', "", tag, format, ##__VA_ARGS__)
-        #define LOG_V(tag, format, ...)  _LOG_PRINTF('V', "", tag, format, ##__VA_ARGS__)
+        #if defined(USE_SEGGER_RTT)
+            #define LOG_D(tag, format, ...)  SEGGER_RTT_printf(0, "D (%lu) %s: " format "\n", \
+                                                              (unsigned long)(HAL_GetTick()), tag, ##__VA_ARGS__)
+            #define LOG_V(tag, format, ...)  SEGGER_RTT_printf(0, "V (%lu) %s: " format "\n", \
+                                                              (unsigned long)(HAL_GetTick()), tag, ##__VA_ARGS__)
+        #else
+            #define LOG_D(tag, format, ...)  _LOG_PRINTF('D', "", tag, format, ##__VA_ARGS__)
+            #define LOG_V(tag, format, ...)  _LOG_PRINTF('V', "", tag, format, ##__VA_ARGS__)
+        #endif
     #else
         #define LOG_D(tag, format, ...)  ((void)0)
         #define LOG_V(tag, format, ...)  ((void)0)

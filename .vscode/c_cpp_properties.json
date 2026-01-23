@@ -8,7 +8,9 @@
                 "${workspaceFolder}/Drivers/CMSIS/Include",
                 "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F7xx/Include",
                 "${workspaceFolder}/Drivers/STM32F7xx_HAL_Driver/Inc",
+                "${workspaceFolder}/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy",
                 "${workspaceFolder}/HAL",
+                "${workspaceFolder}/Drivers_BSP",
                 "${workspaceFolder}/Drivers_BSP/BSP",
                 "${workspaceFolder}/Drivers_BSP/Custom",
                 "${workspaceFolder}/Drivers_BSP/External",
@@ -19,11 +21,25 @@
                 "${workspaceFolder}/Middleware/Services",
                 "${workspaceFolder}/Middleware/Control",
                 "${workspaceFolder}/Middleware/Features",
-                "${workspaceFolder}/OS"
+                "${workspaceFolder}/Middleware/SEGGER/SEGGER",
+                "${workspaceFolder}/Middleware/SEGGER/Config",
+                "${workspaceFolder}/Middleware/SEGGER/Patch",
+                "${workspaceFolder}/Middlewares/Third_Party/FreeRTOS/Source/include",
+                "${workspaceFolder}/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+                "${workspaceFolder}/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1",
+                "${workspaceFolder}/OS",
+                "${workspaceFolder}/Utils",
+                "${workspaceFolder}/Tests",
+                "${workspaceFolder}/Tests/rtt_logging_test",
+                "${workspaceFolder}/Tests/systemview_test",
+                "${workspaceFolder}/Tests/uart_test"
             ],
             "defines": [
                 "STM32F767xx",
-                "USE_HAL_DRIVER"
+                "USE_HAL_DRIVER",
+                "USE_SEGGER_SYSTEMVIEW=1",
+                "RTT_USE_ASM=0",
+                "DEBUG"
             ],
             "compilerPath": "\"C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.3 rel1/bin/arm-none-eabi-gcc.exe\"",
             "cStandard": "c11",
