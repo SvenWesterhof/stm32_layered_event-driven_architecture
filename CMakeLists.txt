@@ -36,6 +36,15 @@ add_executable(${CMAKE_PROJECT_NAME})
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
 
+# CRITICAL: Configure FreeRTOS with SEGGER SystemView trace macros (survives STM32CubeMX regeneration)
+# Without this, FreeRTOS kernel sources (tasks.c, queue.c, etc.) compile without trace macros
+# This MUST be after add_subdirectory(cmake/stm32cubemx) so the FreeRTOS target exists
+target_compile_definitions(FreeRTOS PRIVATE USE_SEGGER_SYSTEMVIEW=1)
+target_include_directories(FreeRTOS PRIVATE
+    ${CMAKE_SOURCE_DIR}/Middleware/SEGGER/Patch
+    ${CMAKE_SOURCE_DIR}/Middleware/SEGGER/SEGGER
+)
+
 # New layered architecture subdirectories
 add_subdirectory(Application)
 add_subdirectory(Middleware)
@@ -43,7 +52,7 @@ add_subdirectory(HAL)
 add_subdirectory(Drivers_BSP)
 add_subdirectory(OS)
 add_subdirectory(Utils)
-
+add_subdirectory(Middleware/SEGGER)
 
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
@@ -57,13 +66,11 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
 )
 
-# Add include paths
-target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined include paths
-)
-
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
+    # SEGGER SystemView configuration (survives STM32CubeMX regeneration)
+    # Temporarily disabled to test if SystemView overhead causes crashes
+    USE_SEGGER_SYSTEMVIEW=1
     # Add user defined symbols
 )
 
@@ -73,6 +80,26 @@ list(REMOVE_ITEM CMAKE_C_IMPLICIT_LINK_LIBRARIES ob)
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
-
+    SEGGER_SystemView
     # Add user defined libraries
+)
+
+# Generate binary and hex files for flashing
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.bin
+    COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.hex
+    COMMENT "Generating .bin and .hex files for flashing"
+)
+
+# Print file sizes and locations
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_SIZE} $<TARGET_FILE:${CMAKE_PROJECT_NAME}>
+    COMMENT "File sizes:"
+)
+
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E echo "Flash files generated:"
+    COMMAND ${CMAKE_COMMAND} -E echo "  Binary: ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.bin"
+    COMMAND ${CMAKE_COMMAND} -E echo "  Hex:    ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.hex"
+    COMMAND ${CMAKE_COMMAND} -E echo "  ELF:    $<TARGET_FILE:${CMAKE_PROJECT_NAME}>"
 )

@@ -24,6 +24,9 @@
 /* USER CODE BEGIN Includes */
 #include "app_main.h"
 #include "os_wrapper.h"
+#include "portable_log.h"
+#include "SEGGER_SYSVIEW.h"
+#include "SEGGER_RTT.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -58,11 +61,11 @@ DMA_HandleTypeDef hdma_usart2_tx;
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
-  .stack_size = 512 * 4,
+  .stack_size = 512 * 4,  // 2KB - sufficient with optimized logging (no stack buffers)
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
-
+static const char *TAG = "MAIN";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -78,7 +81,6 @@ static void MX_USART2_UART_Init(void);
 void StartDefaultTask(void *argument);
 
 /* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -103,7 +105,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+  HAL_Init(); 
 
   /* USER CODE BEGIN Init */
 
@@ -113,7 +115,18 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
+  LOG_I(TAG, "=== Clock configured to 180MHz (8MHz HSE) ===\n");
 
+  // CRITICAL: Reinitialize HAL tick timer after clock config
+  // HAL_Init() configured TIM6 at 16MHz, but now we're at 180MHz
+  HAL_InitTick(TICK_INT_PRIORITY);
+
+  LOG_I(TAG, "HAL tick reinitialized successfully\n");
+
+  // Enable DWT cycle counter for SystemView timestamps
+  CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+  DWT->CYCCNT = 0;
+  DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -125,7 +138,36 @@ int main(void)
   MX_RTC_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  app_init();
+  LOG_I(TAG, "\n=== STM32F767 Application Starting ===\n");
+  LOG_I(TAG, "System Clock: %lu Hz\n", HAL_RCC_GetSysClockFreq());
+  LOG_I(TAG, "HAL Tick: %lu ms\n", HAL_GetTick());
+
+  // Check reset reason
+  if (__HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST)) {
+    LOG_I(TAG, "RESET: Independent Watchdog\n");
+  }
+  if (__HAL_RCC_GET_FLAG(RCC_FLAG_WWDGRST)) {
+    LOG_I(TAG, "RESET: Window Watchdog\n");
+  }
+  if (__HAL_RCC_GET_FLAG(RCC_FLAG_SFTRST)) {
+    LOG_I(TAG, "RESET: Software Reset\n");
+  }
+  if (__HAL_RCC_GET_FLAG(RCC_FLAG_PORRST)) {
+    LOG_I(TAG, "RESET: Power-On Reset\n");
+  }
+  if (__HAL_RCC_GET_FLAG(RCC_FLAG_PINRST)) {
+    LOG_I(TAG, "RESET: External Pin\n");
+  }
+  __HAL_RCC_CLEAR_RESET_FLAGS();
+
+  // Initialize SEGGER SystemView configuration (recording starts after scheduler)
+#if USE_SEGGER_SYSTEMVIEW
+  SEGGER_SYSVIEW_Conf();
+  LOG_I(TAG, "SEGGER SystemView configured (will start after scheduler init)\n");
+#else
+  LOG_I(TAG, "SEGGER SystemView: Disabled\n");
+#endif
+
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -193,16 +235,21 @@ void SystemClock_Config(void)
   /** Configure the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE|RCC_OSCILLATORTYPE_LSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.LSEState = RCC_LSE_ON;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLM = 8;
+  RCC_OscInitStruct.PLL.PLLN = 360;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = 2;
+  RCC_OscInitStruct.PLL.PLLR = 2;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -212,12 +259,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
   {
     Error_Handler();
   }
@@ -239,7 +286,7 @@ static void MX_I2C2_Init(void)
 
   /* USER CODE END I2C2_Init 1 */
   hi2c2.Instance = I2C2;
-  hi2c2.Init.Timing = 0x00303D5B;
+  hi2c2.Init.Timing = 0xC0000E12;
   hi2c2.Init.OwnAddress1 = 112;
   hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -287,7 +334,7 @@ static void MX_I2C4_Init(void)
 
   /* USER CODE END I2C4_Init 1 */
   hi2c4.Instance = I2C4;
-  hi2c4.Init.Timing = 0x00303D5B;
+  hi2c4.Init.Timing = 0xC0000E12;
   hi2c4.Init.OwnAddress1 = 0;
   hi2c4.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c4.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -463,6 +510,7 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
+  __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
@@ -517,14 +565,34 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-  /* Initialize OS wrapper */
+  /* Start SystemView recording now that scheduler is running */
+#if USE_SEGGER_SYSTEMVIEW
+  static uint8_t sysview_started = 0;
+  if (!sysview_started) {
+    SEGGER_SYSVIEW_Start();
+    LOG_I(TAG, "SEGGER SystemView recording started\n");
+    LOG_I(TAG, "SystemView State: %d\n", SEGGER_SYSVIEW_IsStarted());
+    sysview_started = 1;
+  }
+#endif
+
+  //LOG_I(TAG, "Scheduler started, defaultTask running\n");
+
+  // IMPORTANT: Must initialize OS wrapper and application AFTER osKernelStart()
+  // because services_init() initializes hardware (I2C, SPI, sensors) that use
+  // HAL_GetTick() for timeouts. HAL_GetTick() only works after osKernelStart()
+  // since osKernelInitialize() reconfigures the SysTick timer.
   os_init();
+  //LOG_I(TAG, "OS wrapper initialized\n");
+
+  app_init();
+  LOG_I(TAG, "Application initialized successfully\n");
+
   /* Infinite loop */
   for(;;)
   {
     /* Run your application logic here */
     app_run();
-    
     /* Small delay to yield to other tasks */
     osDelay(10);
   }
@@ -607,7 +675,7 @@ void Error_Handler(void)
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
-  /* User can add his own implementation to report the file name and line number,
+ /* User can add his own implementation to report the file name and line number,
      ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
