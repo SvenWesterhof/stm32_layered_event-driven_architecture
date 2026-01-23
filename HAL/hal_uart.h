@@ -15,6 +15,9 @@
 #include <stddef.h>
 #include <stdlib.h>
 
+// Forward declaration to avoid circular dependency with stm32f7xx_hal.h
+struct __UART_HandleTypeDef;
+
 /**
  * @brief UART port identifier
  */
@@ -213,5 +216,30 @@ bool hal_uart_set_baudrate(hal_uart_port_t port, uint32_t baud_rate);
  * @return Default configuration structure
  */
 hal_uart_config_t hal_uart_get_default_config(void);
+
+/**
+ * @brief Handle UART IDLE interrupt (ISR context)
+ * @param huart UART handle (void* to avoid circular dependency)
+ *
+ * @note This function must be called from the USART IRQ handler (e.g., USART2_IRQHandler)
+ *       when the IDLE flag is detected. Add this to stm32f7xx_it.c:
+ *
+ * @code
+ * void USART2_IRQHandler(void)
+ * {
+ *     hal_uart_idle_isr(&huart2);  // Handle IDLE interrupt
+ *     HAL_UART_IRQHandler(&huart2); // Handle other interrupts
+ * }
+ * @endcode
+ */
+void hal_uart_idle_isr(void *huart);
+
+/**
+ * @brief Get debug ISR counters (for diagnostics)
+ * @param idle_count Pointer to store IDLE interrupt count (can be NULL)
+ * @param dma_ht_count Pointer to store DMA Half-Transfer interrupt count (can be NULL)
+ * @param dma_tc_count Pointer to store DMA Transfer-Complete interrupt count (can be NULL)
+ */
+void hal_uart_get_isr_counters(uint32_t *idle_count, uint32_t *dma_ht_count, uint32_t *dma_tc_count);
 
 #endif // HAL_UART_H

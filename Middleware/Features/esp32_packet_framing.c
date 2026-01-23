@@ -61,6 +61,7 @@ typedef struct {
     // Tasks and synchronization
     os_task_handle_t rx_task_handle;
     os_mutex_handle_t tx_mutex;
+    os_semaphore_handle_t rx_data_sem;               // Signaled when RX data available (from HAL callback)
 
     // Async TX state
     uint8_t tx_buffer[STM32_UART_MAX_PACKET_SIZE];  // Static buffer for async TX
@@ -139,14 +140,22 @@ static void notify_event(stm32_uart_event_type_t type, uint8_t *data, size_t len
 // ============================================================================
 
 /**
- * @brief UART HAL event callback - handles TX_DONE for async transmission
+ * @brief UART HAL event callback - handles RX_DATA and TX_DONE events
+ * @note This is called from uart_event_task (task context), NOT from ISR context
  */
 static void uart_hal_event_callback(hal_uart_port_t port, hal_uart_event_t *event, void *user_data)
 {
     (void)port;
     (void)user_data;
 
-    if (event->type == HAL_UART_EVENT_TX_DONE) {
+    if (event->type == HAL_UART_EVENT_RX_DATA) {
+        // RX data available - signal the rx_task
+        // NOTE: This is called from task context, so use normal semaphore give (not _from_isr)
+        if (state.rx_data_sem != NULL) {
+            os_semaphore_give(state.rx_data_sem);
+        }
+    }
+    else if (event->type == HAL_UART_EVENT_TX_DONE) {
         // TX DMA completed - signal the semaphore
         state.tx_in_progress = false;
         if (state.tx_complete_sem != NULL) {
@@ -276,14 +285,23 @@ static void rx_process_byte(uint8_t byte)
 
 /**
  * @brief Receive task - processes incoming bytes from UART buffer
+ *
+ * Blocks on rx_data_sem which is signaled by HAL callback when RX data arrives.
+ * Uses ISR-based triggering for low latency and reduced CPU usage.
  */
 static void rx_task(void *arg)
 {
+    (void)arg;
     uint8_t rx_buffer[64];
 
-    LOG_I(TAG, "RX task started");
+    LOG_I(TAG, "RX task started (ISR-based)");
 
     while (1) {
+        // Block until RX data available (signaled by HAL callback) or timeout
+        // Use 50ms timeout as safety fallback
+        os_semaphore_take(state.rx_data_sem, 50);
+
+        // Process all available data
         int available = hal_uart_available((hal_uart_port_t)STM32_UART_PORT);
 
         if (available > 0) {
@@ -294,8 +312,6 @@ static void rx_task(void *arg)
             for (int i = 0; i < bytes_read; i++) {
                 rx_process_byte(rx_buffer[i]);
             }
-        } else {
-            os_delay_ms(1);
         }
     }
 }
@@ -361,10 +377,20 @@ uart_driver_status_t stm32_uart_init(const stm32_uart_config_t *config)
         return UART_DRV_ERR_MEMORY;
     }
 
+    // Create RX data semaphore (binary, initially empty)
+    state.rx_data_sem = os_semaphore_create_binary();
+    if (state.rx_data_sem == NULL) {
+        LOG_E(TAG, "Failed to create RX semaphore");
+        os_mutex_delete(state.tx_mutex);
+        hal_uart_deinit((hal_uart_port_t)STM32_UART_PORT);
+        return UART_DRV_ERR_MEMORY;
+    }
+
     // Create TX complete semaphore (binary, initially available)
     state.tx_complete_sem = os_semaphore_create_binary();
     if (state.tx_complete_sem == NULL) {
         LOG_E(TAG, "Failed to create TX semaphore");
+        os_semaphore_delete(state.rx_data_sem);
         os_mutex_delete(state.tx_mutex);
         hal_uart_deinit((hal_uart_port_t)STM32_UART_PORT);
         return UART_DRV_ERR_MEMORY;
@@ -385,6 +411,8 @@ uart_driver_status_t stm32_uart_init(const stm32_uart_config_t *config)
                                            NULL, RX_TASK_PRIORITY, &state.rx_task_handle, 1);
     if (ret != OS_SUCCESS) {
         LOG_E(TAG, "Failed to create RX task");
+        os_semaphore_delete(state.tx_complete_sem);
+        os_semaphore_delete(state.rx_data_sem);
         os_mutex_delete(state.tx_mutex);
         hal_uart_deinit((hal_uart_port_t)STM32_UART_PORT);
         return UART_DRV_ERR_MEMORY;
@@ -408,11 +436,17 @@ uart_driver_status_t stm32_uart_deinit(void)
         os_task_delete(state.rx_task_handle);
         state.rx_task_handle = NULL;
     }
-    
+
     // Delete TX mutex
     if (state.tx_mutex != NULL) {
         os_mutex_delete(state.tx_mutex);
         state.tx_mutex = NULL;
+    }
+
+    // Delete RX data semaphore
+    if (state.rx_data_sem != NULL) {
+        os_semaphore_delete(state.rx_data_sem);
+        state.rx_data_sem = NULL;
     }
 
     // Delete TX semaphore
