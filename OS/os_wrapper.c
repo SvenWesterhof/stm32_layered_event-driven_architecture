@@ -50,7 +50,7 @@ static const char *TAG = "OS_WRAPPER";
 
 os_result_t os_init(void)
 {
-    LOG_I(TAG, "OS wrapper initialized (FreeRTOS backend)");
+    //LOG_I(TAG, "OS wrapper initialized (FreeRTOS backend)");
     return OS_SUCCESS;
 }
 

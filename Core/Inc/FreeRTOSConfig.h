@@ -64,7 +64,7 @@
 #define configTICK_RATE_HZ                       ((TickType_t)1000)
 #define configMAX_PRIORITIES                     ( 56 )
 #define configMINIMAL_STACK_SIZE                 ((uint16_t)128)
-#define configTOTAL_HEAP_SIZE                    ((size_t)32768)
+#define configTOTAL_HEAP_SIZE                    ((size_t)65536)
 #define configMAX_TASK_NAME_LEN                  ( 16 )
 #define configUSE_TRACE_FACILITY                 1
 #define configUSE_16_BIT_TICKS                   0
@@ -140,7 +140,13 @@ See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 /* Normal assert() semantics without relying on the provision of an assert.h
 header file. */
 /* USER CODE BEGIN 1 */
-#define configASSERT( x ) if ((x) == 0) {taskDISABLE_INTERRUPTS(); for( ;; );}
+// Enhanced assert with RTT logging for debugging
+extern int SEGGER_RTT_printf(unsigned BufferIndex, const char * sFormat, ...);
+#define configASSERT( x ) if ((x) == 0) { \
+    SEGGER_RTT_printf(0, "\n!!! FreeRTOS ASSERT FAILED at %s:%d !!!\n", __FILE__, __LINE__); \
+    taskDISABLE_INTERRUPTS(); \
+    for( ;; ); \
+}
 /* USER CODE END 1 */
 
 /* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS
@@ -155,6 +161,25 @@ standard names. */
 
 /* USER CODE BEGIN Defines */
 /* Section where parameter definitions can be added (for instance, to override default ones in FreeRTOS.h) */
+
+// Performance monitoring features
+#define configUSE_STATS_FORMATTING_FUNCTIONS     1
+#define INCLUDE_xTaskGetIdleTaskHandle           1
+#define INCLUDE_pxTaskGetStackStart              1
+
+// Runtime statistics - disabled for now (SystemView provides same info)
+// Can be enabled later for production monitoring without debugger attached
+//#define configGENERATE_RUN_TIME_STATS            1
+//#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() // Already initialized in main.c
+//#define portGET_RUN_TIME_COUNTER_VALUE()         DWT->CYCCNT
+
+// SEGGER SystemView integration
+// This must be at the end of FreeRTOSConfig.h to override trace macros
+#if USE_SEGGER_SYSTEMVIEW
+  #include "SEGGER_SYSVIEW_FreeRTOS.h"
+  //add trace macros
+#endif
+
 /* USER CODE END Defines */
 
 #endif /* FREERTOS_CONFIG_H */

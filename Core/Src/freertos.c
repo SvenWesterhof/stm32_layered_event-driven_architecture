@@ -63,6 +63,7 @@ void vApplicationStackOverflowHook(xTaskHandle xTask, signed char *pcTaskName)
 {
    (void)xTask;
    LOG_E(TAG, "STACK OVERFLOW in task: %s", pcTaskName);
+
    __disable_irq();
    while (1) {
       // Halt here for debugger
