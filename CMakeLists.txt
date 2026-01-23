@@ -66,14 +66,6 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
 )
 
-# Add include paths
-target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # SEGGER SystemView includes for FreeRTOS integration (survives STM32CubeMX regeneration)
-    ${CMAKE_SOURCE_DIR}/Middleware/SEGGER/Patch
-    ${CMAKE_SOURCE_DIR}/Middleware/SEGGER/SEGGER
-    # Add user defined include paths
-)
-
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
     # SEGGER SystemView configuration (survives STM32CubeMX regeneration)

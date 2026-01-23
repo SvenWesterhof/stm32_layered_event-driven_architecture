@@ -167,20 +167,11 @@ standard names. */
 #define INCLUDE_xTaskGetIdleTaskHandle           1
 #define INCLUDE_pxTaskGetStackStart              1
 
-/* Runtime statistics - requires a timer
- * Note: You need to implement these macros for your timer
- * Example using DWT cycle counter (Cortex-M):
- * extern volatile uint32_t uwTick;
- * #define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() do { \
- *     CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk; \
- *     DWT->CYCCNT = 0; \
- *     DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk; \
- * } while(0)
- * #define portGET_RUN_TIME_COUNTER_VALUE() DWT->CYCCNT
- */
-
-// For now, comment out until timer is configured:
-// #define configGENERATE_RUN_TIME_STATS            1
+// Runtime statistics - disabled for now (SystemView provides same info)
+// Can be enabled later for production monitoring without debugger attached
+//#define configGENERATE_RUN_TIME_STATS            1
+//#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() // Already initialized in main.c
+//#define portGET_RUN_TIME_COUNTER_VALUE()         DWT->CYCCNT
 
 // SEGGER SystemView integration
 // This must be at the end of FreeRTOSConfig.h to override trace macros
