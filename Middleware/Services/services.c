@@ -19,6 +19,7 @@ void services_init(void)
 
 #ifdef ENABLE_UART_TEST
     serv_uart_test_init();
+    LOG_I(TAG, "UART test service initialized\n");
 #endif
 }
 
